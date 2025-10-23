@@ -1,0 +1,9 @@
+robotframework==6.1.1
+robotframework-requests==0.9.5
+requests==2.31.0
+robotframework-jsonlibrary==0.5
+robotframework-browser==18.0.0
+robotframework-faker==5.0.0
+faker==20.1.0
+pyyaml==6.0.1
+python-dotenv==1.0.0
