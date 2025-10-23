@@ -1,0 +1,43 @@
+# Robot Framework
+results/
+*.log
+*.html
+*.xml
+output.xml
+log.html
+report.html
+selenium-screenshot-*.png
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment
+.env
+*.env.local
+
+# Dependencies
+node_modules/
+
+# Temporários
+tmp/
+temp/
+*.tmp
