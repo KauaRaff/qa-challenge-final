@@ -69,5 +69,5 @@ Log Request Details
 Log Response Details
     [Documentation]    Loga detalhes da resposta para debug
     [Arguments]    ${response}
-    Log    🟢 RESPONSE: Status ${response.status_code}    console=True
-    Log    📄 Body: ${response.text}    console=True
+    Log         RESPONSE: Status ${response.status_code}    console=True
+    Log         Body: ${response.text}    console=True

@@ -8,7 +8,7 @@ ${AUTH_REGISTER}    /auth/register
 ${AUTH_LOGIN}       /auth/login
 ${AUTH_ME}          /auth/me
 
-# Credenciais de teste pré-cadastradas (do seed)
+
 ${ADMIN_EMAIL}      admin@example.com
 ${ADMIN_PASSWORD}   password123
 ${USER_EMAIL}       user@example.com
@@ -16,7 +16,7 @@ ${USER_PASSWORD}    password123
 
 *** Keywords ***
 Gerar Dados de Usuario Valido
-    [Documentation]    Gera dados aleatórios para cadastro de usuário
+    [Documentation]       Gera dados aleatórios para cadastro de usuário
     ${random_num}=    Generate Random String    8    [NUMBERS]
     ${name}=    FakerLibrary.Name
     ${email}=    Set Variable    teste_${random_num}@cinema.com
