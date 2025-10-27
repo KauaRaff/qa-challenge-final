@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-27T14:37:35.406228" rpa="false" schemaversion="5">
+<suite id="s1" name="Register" source="c:\Users\kauar\OneDrive\Área de Trabalho\challenge-final\cinema-app-automation\tests\api\auth\register.robot">
+<kw name="Log" owner="BuiltIn" type="SETUP">
+<msg time="2025-10-27T14:37:36.318470" level="INFO">Iniciando testes de Registro</msg>
+<arg>Iniciando testes de Registro</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.317808" elapsed="0.003749"/>
+</kw>
+<test id="s1-t1" name="TC_API_001 - Registrar usuario com dados validos deve retornar status 201" line="8">
+<kw name="Gerar Dados de Usuario Valido" owner="auth_service">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-10-27T14:37:36.325514" level="INFO">${random_num} = 79874241</msg>
+<var>${random_num}</var>
+<arg>8</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.324823" elapsed="0.001906"/>
+</kw>
+<kw name="Name" owner="FakerLibrary">
+<msg time="2025-10-27T14:37:36.328092" level="INFO">${name} = Pietro da Luz</msg>
+<var>${name}</var>
+<doc>:example: 'John Doe'</doc>
+<status status="PASS" start="2025-10-27T14:37:36.327280" elapsed="0.001127"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-27T14:37:36.329250" level="INFO">${email} = teste_79874241@cinema.com</msg>
+<var>${email}</var>
+<arg>teste_${random_num}@cinema.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.328770" elapsed="0.000691"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-27T14:37:36.330561" level="INFO">${password} = Senha@123</msg>
+<var>${password}</var>
+<arg>Senha@123</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.329914" elapsed="0.000830"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-10-27T14:37:36.333500" level="INFO">${user_data} = {'name': 'Pietro da Luz', 'email': 'teste_79874241@cinema.com', 'password': 'Senha@123'}</msg>
+<var>${user_data}</var>
+<arg>name=${name}</arg>
+<arg>email=${email}</arg>
+<arg>password=${password}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.331151" elapsed="0.002691"/>
+</kw>
+<return>
+<value>${user_data}</value>
+<status status="PASS" start="2025-10-27T14:37:36.334085" elapsed="0.000248"/>
+</return>
+<msg time="2025-10-27T14:37:36.334738" level="INFO">${user_data} = {'name': 'Pietro da Luz', 'email': 'teste_79874241@cinema.com', 'password': 'Senha@123'}</msg>
+<var>${user_data}</var>
+<doc>Gera dados aleatórios para cadastro de usuário</doc>
+<status status="PASS" start="2025-10-27T14:37:36.324089" elapsed="0.010920"/>
+</kw>
+<kw name="Registrar Usuario" owner="auth_service">
+<kw name="Criar Sessao da API" owner="base_api">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-10-27T14:37:36.338351" level="INFO">Creating Session using : alias=cinema_api, url=http://localhost:3000/api/v1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>cinema_api</arg>
+<arg>${BASE_URL}</arg>
+<arg>verify=False</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-10-27T14:37:36.337670" elapsed="0.002397"/>
+</kw>
+<doc>Cria uma sessão HTTP para a API</doc>
+<status status="PASS" start="2025-10-27T14:37:36.336912" elapsed="0.003485"/>
+</kw>
+<kw name="Criar Headers Padrao" owner="base_api">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-10-27T14:37:36.342508" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>Content-Type=${CONTENT_TYPE}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.341774" elapsed="0.001009"/>
+</kw>
+<return>
+<value>${headers}</value>
+<status status="PASS" start="2025-10-27T14:37:36.343047" elapsed="0.000250"/>
+</return>
+<msg time="2025-10-27T14:37:36.343719" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<var>${headers}</var>
+<doc>Cria headers padrão para requisições</doc>
+<status status="PASS" start="2025-10-27T14:37:36.340864" elapsed="0.003087"/>
+</kw>
+<kw name="Log Request Details" owner="base_api">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-27T14:37:36.346282" level="INFO">🔵 REQUEST: POST /auth/register</msg>
+<arg>🔵 REQUEST: ${method} ${endpoint}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.345643" elapsed="0.047322"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-27T14:37:36.397010" level="INFO">Body: {'name': 'Pietro da Luz', 'email': 'teste_79874241@cinema.com', 'password': 'Senha@123'}</msg>
+<arg>Body: ${body}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.394330" elapsed="0.030601"/>
+</kw>
+<arg>${body} is not ${NONE}</arg>
+<arg>Log</arg>
+<arg>Body: ${body}</arg>
+<arg>console=True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.393501" elapsed="0.032040"/>
+</kw>
+<arg>POST</arg>
+<arg>${AUTH_REGISTER}</arg>
+<arg>${user_data}</arg>
+<doc>Loga detalhes da requisição para debug</doc>
+<status status="PASS" start="2025-10-27T14:37:36.344424" elapsed="0.081651"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-10-27T14:37:36.934458" level="INFO">POST Request : url=http://localhost:3000/api/v1/auth/register 
+ path_url=/api/v1/auth/register 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '88'} 
+ body=b'{"name": "Pietro da Luz", "email": "teste_79874241@cinema.com", "password": "Senha@123"}' 
+ </msg>
+<msg time="2025-10-27T14:37:36.935882" level="INFO">POST Response : url=http://localhost:3000/api/v1/auth/register 
+ status=201, reason=Created 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '313', 'ETag': 'W/"139-Axemttkz8LokdKhiVjBHZnwb9B8"', 'Date': 'Mon, 27 Oct 2025 17:37:36 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body={"success":true,"data":{"_id":"68ffade0b1f8a163bb0e355a","name":"Pietro da Luz","email":"teste_79874241@cinema.com","role":"user","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmZhZGUwYjFmOGExNjNiYjBlMzU1YSIsImlhdCI6MTc2MTU4NjY1NiwiZXhwIjoxNzY1NDc0NjU2fQ.64zuXtTl5AhqCG9AnTkqlnSergL-b_DKth4n4Zgru1Y"}} 
+ </msg>
+<msg time="2025-10-27T14:37:36.936387" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>cinema_api</arg>
+<arg>${AUTH_REGISTER}</arg>
+<arg>json=${user_data}</arg>
+<arg>headers=${headers}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.426711" elapsed="0.509834"/>
+</kw>
+<kw name="Log Response Details" owner="base_api">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-27T14:37:36.938346" level="INFO">RESPONSE: Status 201</msg>
+<arg>RESPONSE: Status ${response.status_code}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.937467" elapsed="0.001362"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-27T14:37:36.940060" level="INFO">Body: {"success":true,"data":{"_id":"68ffade0b1f8a163bb0e355a","name":"Pietro da Luz","email":"teste_79874241@cinema.com","role":"user","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmZhZGUwYjFmOGExNjNiYjBlMzU1YSIsImlhdCI6MTc2MTU4NjY1NiwiZXhwIjoxNzY1NDc0NjU2fQ.64zuXtTl5AhqCG9AnTkqlnSergL-b_DKth4n4Zgru1Y"}}</msg>
+<arg>Body: ${response.text}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.939124" elapsed="0.001698"/>
+</kw>
+<arg>${response}</arg>
+<doc>Loga detalhes da resposta para debug</doc>
+<status status="PASS" start="2025-10-27T14:37:36.936914" elapsed="0.004299"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-10-27T14:37:36.941496" elapsed="0.000268"/>
+</return>
+<msg time="2025-10-27T14:37:36.942299" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>${user_data}</arg>
+<doc>Registra um novo usuário via API</doc>
+<status status="PASS" start="2025-10-27T14:37:36.336028" elapsed="0.606559"/>
+</kw>
+<kw name="Validar Status Code" owner="base_api">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-10-27T14:37:36.947389" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>${expected_status}</arg>
+<arg>msg=Status code esperado: ${expected_status}, recebido: ${response.status_code}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.944315" elapsed="0.003470"/>
+</kw>
+<arg>${response}</arg>
+<arg>201</arg>
+<doc>Valida o status code da resposta</doc>
+<status status="PASS" start="2025-10-27T14:37:36.943489" elapsed="0.004776"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-27T14:37:36.950616" level="INFO">${response_json} = {'success': True, 'data': {'_id': '68ffade0b1f8a163bb0e355a', 'name': 'Pietro da Luz', 'email': 'teste_79874241@cinema.com', 'role': 'user', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4...</msg>
+<var>${response_json}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.949412" elapsed="0.001465"/>
+</kw>
+<kw name="Validar Campo Existe" owner="base_api">
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response_json}</arg>
+<arg>${field}</arg>
+<arg>msg=Campo '${field}' não encontrado na resposta</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.952699" elapsed="0.000855"/>
+</kw>
+<arg>${response_json}</arg>
+<arg>success</arg>
+<doc>Valida que um campo existe no JSON de resposta</doc>
+<status status="PASS" start="2025-10-27T14:37:36.951854" elapsed="0.002024"/>
+</kw>
+<kw name="Validar Campo Existe" owner="base_api">
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response_json}</arg>
+<arg>${field}</arg>
+<arg>msg=Campo '${field}' não encontrado na resposta</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.955220" elapsed="0.000504"/>
+</kw>
+<arg>${response_json}</arg>
+<arg>data</arg>
+<doc>Valida que um campo existe no JSON de resposta</doc>
+<status status="PASS" start="2025-10-27T14:37:36.954619" elapsed="0.001312"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-10-27T14:37:36.957248" level="INFO">${data} = {'_id': '68ffade0b1f8a163bb0e355a', 'name': 'Pietro da Luz', 'email': 'teste_79874241@cinema.com', 'role': 'user', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmZhZGUwYjFmOGExNjNiYjBlMz...</msg>
+<var>${data}</var>
+<arg>${response_json}</arg>
+<arg>data</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.956755" elapsed="0.000687"/>
+</kw>
+<kw name="Validar Campo Nao Vazio" owner="base_api">
+<kw name="Validar Campo Existe" owner="base_api">
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response_json}</arg>
+<arg>${field}</arg>
+<arg>msg=Campo '${field}' não encontrado na resposta</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.960039" elapsed="0.000705"/>
+</kw>
+<arg>${response_json}</arg>
+<arg>${field}</arg>
+<doc>Valida que um campo existe no JSON de resposta</doc>
+<status status="PASS" start="2025-10-27T14:37:36.959234" elapsed="0.001838"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-10-27T14:37:36.962769" level="INFO">${value} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmZhZGUwYjFmOGExNjNiYjBlMzU1YSIsImlhdCI6MTc2MTU4NjY1NiwiZXhwIjoxNzY1NDc0NjU2fQ.64zuXtTl5AhqCG9AnTkqlnSergL-b_DKth4n4Zgru1Y</msg>
+<var>${value}</var>
+<arg>${response_json}</arg>
+<arg>${field}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.961845" elapsed="0.001206"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-10-27T14:37:36.963901" level="INFO">Length is 171.</msg>
+<arg>${value}</arg>
+<arg>msg=Campo '${field}' está vazio</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.963414" elapsed="0.000774"/>
+</kw>
+<arg>${data}</arg>
+<arg>token</arg>
+<doc>Valida que um campo existe e não está vazio</doc>
+<status status="PASS" start="2025-10-27T14:37:36.958339" elapsed="0.006069"/>
+</kw>
+<kw name="Validar Campo Nao Vazio" owner="base_api">
+<kw name="Validar Campo Existe" owner="base_api">
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response_json}</arg>
+<arg>${field}</arg>
+<arg>msg=Campo '${field}' não encontrado na resposta</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.968241" elapsed="0.000574"/>
+</kw>
+<arg>${response_json}</arg>
+<arg>${field}</arg>
+<doc>Valida que um campo existe no JSON de resposta</doc>
+<status status="PASS" start="2025-10-27T14:37:36.966766" elapsed="0.002294"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-10-27T14:37:36.969684" level="INFO">${value} = 68ffade0b1f8a163bb0e355a</msg>
+<var>${value}</var>
+<arg>${response_json}</arg>
+<arg>${field}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.969312" elapsed="0.000528"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-10-27T14:37:36.970439" level="INFO">Length is 24.</msg>
+<arg>${value}</arg>
+<arg>msg=Campo '${field}' está vazio</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.970047" elapsed="0.000641"/>
+</kw>
+<arg>${data}</arg>
+<arg>_id</arg>
+<doc>Valida que um campo existe e não está vazio</doc>
+<status status="PASS" start="2025-10-27T14:37:36.965674" elapsed="0.005243"/>
+</kw>
+<kw name="Validar Campo Nao Vazio" owner="base_api">
+<kw name="Validar Campo Existe" owner="base_api">
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response_json}</arg>
+<arg>${field}</arg>
+<arg>msg=Campo '${field}' não encontrado na resposta</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.973909" elapsed="0.000542"/>
+</kw>
+<arg>${response_json}</arg>
+<arg>${field}</arg>
+<doc>Valida que um campo existe no JSON de resposta</doc>
+<status status="PASS" start="2025-10-27T14:37:36.973337" elapsed="0.001363"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-10-27T14:37:36.975638" level="INFO">${value} = Pietro da Luz</msg>
+<var>${value}</var>
+<arg>${response_json}</arg>
+<arg>${field}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.975178" elapsed="0.000625"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-10-27T14:37:36.976415" level="INFO">Length is 13.</msg>
+<arg>${value}</arg>
+<arg>msg=Campo '${field}' está vazio</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.976036" elapsed="0.000565"/>
+</kw>
+<arg>${data}</arg>
+<arg>name</arg>
+<doc>Valida que um campo existe e não está vazio</doc>
+<status status="PASS" start="2025-10-27T14:37:36.972635" elapsed="0.004442"/>
+</kw>
+<kw name="Validar Campo Nao Vazio" owner="base_api">
+<kw name="Validar Campo Existe" owner="base_api">
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response_json}</arg>
+<arg>${field}</arg>
+<arg>msg=Campo '${field}' não encontrado na resposta</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.980692" elapsed="0.001589"/>
+</kw>
+<arg>${response_json}</arg>
+<arg>${field}</arg>
+<doc>Valida que um campo existe no JSON de resposta</doc>
+<status status="PASS" start="2025-10-27T14:37:36.979408" elapsed="0.003342"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-10-27T14:37:36.983726" level="INFO">${value} = teste_79874241@cinema.com</msg>
+<var>${value}</var>
+<arg>${response_json}</arg>
+<arg>${field}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.983112" elapsed="0.000845"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-10-27T14:37:36.984683" level="INFO">Length is 25.</msg>
+<arg>${value}</arg>
+<arg>msg=Campo '${field}' está vazio</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.984250" elapsed="0.000633"/>
+</kw>
+<arg>${data}</arg>
+<arg>email</arg>
+<doc>Valida que um campo existe e não está vazio</doc>
+<status status="PASS" start="2025-10-27T14:37:36.978025" elapsed="0.007037"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${data['email']}</arg>
+<arg>${user_data['email']}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.985861" elapsed="0.002001"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${data['name']}</arg>
+<arg>${user_data['name']}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.988612" elapsed="0.001884"/>
+</kw>
+<kw name="Dictionary Should Not Contain Key" owner="Collections">
+<arg>${data}</arg>
+<arg>password</arg>
+<arg>msg=Senha não deve ser retornada na resposta</arg>
+<doc>Fails if ``key`` is found from ``dictionary``.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.991257" elapsed="0.000718"/>
+</kw>
+<doc>Valida que é possível registrar um novo usuário com dados válidos</doc>
+<tag>api</tag>
+<tag>auth</tag>
+<tag>register</tag>
+<status status="PASS" start="2025-10-27T14:37:36.322176" elapsed="0.670588"/>
+</test>
+<kw name="Log" owner="BuiltIn" type="TEARDOWN">
+<msg time="2025-10-27T14:37:36.996678" level="INFO">Testes de Registro finalizados</msg>
+<arg>Testes de Registro finalizados</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-27T14:37:36.995471" elapsed="0.001838"/>
+</kw>
+<doc>Testes de registro de usuários no Cinema APP</doc>
+<status status="PASS" start="2025-10-27T14:37:35.418957" elapsed="1.578691"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">api</stat>
+<stat pass="1" fail="0" skip="0">auth</stat>
+<stat pass="1" fail="0" skip="0">register</stat>
+</tag>
+<suite>
+<stat name="Register" id="s1" pass="1" fail="0" skip="0">Register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

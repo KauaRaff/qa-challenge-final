@@ -56,15 +56,16 @@ Validar Mensagem de Erro
 Extrair Token Da Resposta
     [Documentation]    Extrai o token JWT da resposta de login/registro
     [Arguments]    ${response_json}
-    ${token}=    Get From Dictionary    ${response_json}    token
+    ${data}=    Get From Dictionary    ${response_json}    data
+    ${token}=    Get From Dictionary    ${data}    token
     Should Not Be Empty    ${token}    msg=Token não encontrado na resposta
     RETURN        ${token}
 
 Log Request Details
     [Documentation]    Loga detalhes da requisição para debug
-    [Arguments]    ${method}    ${endpoint}    ${body}=${EMPTY}
+    [Arguments]    ${method}    ${endpoint}    ${body}=${NONE}
     Log    🔵 REQUEST: ${method} ${endpoint}    console=True
-    Run Keyword If    '${body}' != '${EMPTY}'    Log     Body: ${body}    console=True
+    Run Keyword If    ${body} is not ${NONE}    Log     Body: ${body}    console=True
 
 Log Response Details
     [Documentation]    Loga detalhes da resposta para debug

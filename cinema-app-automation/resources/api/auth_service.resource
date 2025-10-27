@@ -10,8 +10,8 @@ ${AUTH_ME}          /auth/me
 
 
 ${ADMIN_EMAIL}      admin@example.com
-${ADMIN_PASSWORD}   password123
-${USER_EMAIL}       user@example.com
+${ADMIN_PASSWORD}   admin123
+${USER_EMAIL}       test@example.com
 ${USER_PASSWORD}    password123
 
 *** Keywords ***

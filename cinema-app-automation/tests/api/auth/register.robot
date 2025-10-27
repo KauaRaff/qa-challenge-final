@@ -19,14 +19,18 @@ TC_API_001 - Registrar usuario com dados validos deve retornar status 201
     Validar Status Code    ${response}    201
     
     ${response_json}=    Set Variable    ${response.json()}
-    Validar Campo Nao Vazio    ${response_json}    token
-    Validar Campo Nao Vazio    ${response_json}    user
+    Validar Campo Existe    ${response_json}    success
+    Validar Campo Existe    ${response_json}    data
     
-    # Valida dados do usuário retornado
-    ${user}=    Get From Dictionary    ${response_json}    user
-    Should Be Equal    ${user['email']}    ${user_data['email']}
-    Should Be Equal    ${user['name']}    ${user_data['name']}
-    Dictionary Should Not Contain Key    ${user}    password    
+    ${data}=    Get From Dictionary    ${response_json}    data
+    Validar Campo Nao Vazio    ${data}    token
+    Validar Campo Nao Vazio    ${data}    _id
+    Validar Campo Nao Vazio    ${data}    name
+    Validar Campo Nao Vazio    ${data}    email
+    
+    Should Be Equal    ${data['email']}    ${user_data['email']}
+    Should Be Equal    ${data['name']}    ${user_data['name']}
+    Dictionary Should Not Contain Key    ${data}    password    
     ...    msg=Senha não deve ser retornada na resposta
 
 TC_API_002 - Registrar usuario com email duplicado deve retornar status 400

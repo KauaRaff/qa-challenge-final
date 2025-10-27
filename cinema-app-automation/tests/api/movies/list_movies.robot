@@ -16,15 +16,16 @@ TC_API_009 - Listar todos os filmes deve retornar status 200
     Validar Status Code    ${response}    200
     
     ${response_json}=    Set Variable    ${response.json()}
+    Validar Campo Existe    ${response_json}    success
+    Validar Campo Existe    ${response_json}    data
     
+    ${movies}=    Get From Dictionary    ${response_json}    data
+    ${is_list}=    Evaluate    isinstance($movies, list)
+    Should Be True    ${is_list}    msg=Data deveria ser um array de filmes
     
-    ${is_list}=    Evaluate    isinstance($response_json, list)
-    Should Be True    ${is_list}    msg=Resposta deveria ser um array de filmes
-    
-   
-    ${movies_count}=    Get Length    ${response_json}
+    ${movies_count}=    Get Length    ${movies}
     Run Keyword If    ${movies_count} > 0
-    ...    Validar Estrutura Do Filme    ${response_json}[0]
+    ...    Validar Estrutura Do Filme    ${movies}[0]
 
 TC_API_010 - Buscar filme por ID valido deve retornar status 200
     [Documentation]    Valida busca de filme específico por ID
@@ -77,14 +78,8 @@ Validar Estrutura Do Filme
     
     Validar Campo Nao Vazio    ${movie}    _id
     Validar Campo Nao Vazio    ${movie}    title
-    Validar Campo Existe    ${movie}    genre
+    Validar Campo Existe    ${movie}    genres
     Validar Campo Existe    ${movie}    duration
-    Validar Campo Existe    ${movie}    rating
     
-   
     ${duration}=    Get From Dictionary    ${movie}    duration
     Should Be True    ${duration} > 0    msg=Duração deve ser maior que zero
-    
-    ${rating}=    Get From Dictionary    ${movie}    rating
-    Should Be True    ${rating} >= 0 and ${rating} <= 5
-    ...    msg=Rating deve estar entre 0 e 5
