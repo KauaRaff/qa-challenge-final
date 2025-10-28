@@ -1,409 +1,387 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-27T14:37:35.406228" rpa="false" schemaversion="5">
-<suite id="s1" name="Register" source="c:\Users\kauar\OneDrive\Área de Trabalho\challenge-final\cinema-app-automation\tests\api\auth\register.robot">
-<kw name="Log" owner="BuiltIn" type="SETUP">
-<msg time="2025-10-27T14:37:36.318470" level="INFO">Iniciando testes de Registro</msg>
-<arg>Iniciando testes de Registro</arg>
-<arg>console=True</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.317808" elapsed="0.003749"/>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-28T14:05:56.435945" rpa="false" schemaversion="5">
+<suite id="s1" name="Browse Movies" source="c:\Users\kauar\OneDrive\Área de Trabalho\challenge-final\cinema-app-automation\tests\web\movies\browse_movies.robot">
+<kw name="Preparar Navegador" type="SETUP">
+<kw name="Abrir Navegador" owner="base_page">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-10-28T14:05:57.499613" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "executablePath": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe", "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\kauar\\OneDrive\\\u00c1rea de Trabalho\\challenge-final\\browser\\traces\\temp\\3be5382d-f204-41b1-bae3-99f7996b33e6"}</msg>
+<msg time="2025-10-28T14:05:57.546288" level="INFO">Starting Browser process C:\Users\kauar\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:62526</msg>
+<msg time="2025-10-28T14:05:59.547066" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"executablePath":"C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe","handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\kauar\\OneDrive\\Área de Trabalho\\challenge-final\\browser\\traces\\temp\\3be5382d-f204-41b1-bae3-99f7996b33e6"}</msg>
+<arg>${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>executablePath=${BRAVE_PATH}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-10-28T14:05:57.497854" elapsed="2.049843"/>
 </kw>
-<test id="s1-t1" name="TC_API_001 - Registrar usuario com dados validos deve retornar status 201" line="8">
-<kw name="Gerar Dados de Usuario Valido" owner="auth_service">
-<kw name="Generate Random String" owner="String">
-<msg time="2025-10-27T14:37:36.325514" level="INFO">${random_num} = 79874241</msg>
-<var>${random_num}</var>
-<arg>8</arg>
-<arg>[NUMBERS]</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.324823" elapsed="0.001906"/>
+<kw name="New Context" owner="Browser">
+<msg time="2025-10-28T14:05:59.551816" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  }
+}</msg>
+<msg time="2025-10-28T14:05:59.581718" level="INFO">Successfully created context. </msg>
+<msg time="2025-10-28T14:05:59.582198" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-10-28T14:05:59.548267" elapsed="0.034235"/>
 </kw>
-<kw name="Name" owner="FakerLibrary">
-<msg time="2025-10-27T14:37:36.328092" level="INFO">${name} = Pietro da Luz</msg>
-<var>${name}</var>
-<doc>:example: 'John Doe'</doc>
-<status status="PASS" start="2025-10-27T14:37:36.327280" elapsed="0.001127"/>
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>${TIMEOUT}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2025-10-28T14:05:59.582950" elapsed="0.006418"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-27T14:37:36.329250" level="INFO">${email} = teste_79874241@cinema.com</msg>
-<var>${email}</var>
-<arg>teste_${random_num}@cinema.com</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.328770" elapsed="0.000691"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-27T14:37:36.330561" level="INFO">${password} = Senha@123</msg>
-<var>${password}</var>
-<arg>Senha@123</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.329914" elapsed="0.000830"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-10-27T14:37:36.333500" level="INFO">${user_data} = {'name': 'Pietro da Luz', 'email': 'teste_79874241@cinema.com', 'password': 'Senha@123'}</msg>
-<var>${user_data}</var>
-<arg>name=${name}</arg>
-<arg>email=${email}</arg>
-<arg>password=${password}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.331151" elapsed="0.002691"/>
-</kw>
-<return>
-<value>${user_data}</value>
-<status status="PASS" start="2025-10-27T14:37:36.334085" elapsed="0.000248"/>
-</return>
-<msg time="2025-10-27T14:37:36.334738" level="INFO">${user_data} = {'name': 'Pietro da Luz', 'email': 'teste_79874241@cinema.com', 'password': 'Senha@123'}</msg>
-<var>${user_data}</var>
-<doc>Gera dados aleatórios para cadastro de usuário</doc>
-<status status="PASS" start="2025-10-27T14:37:36.324089" elapsed="0.010920"/>
-</kw>
-<kw name="Registrar Usuario" owner="auth_service">
-<kw name="Criar Sessao da API" owner="base_api">
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-10-27T14:37:36.338351" level="INFO">Creating Session using : alias=cinema_api, url=http://localhost:3000/api/v1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>cinema_api</arg>
-<arg>${BASE_URL}</arg>
-<arg>verify=False</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-10-27T14:37:36.337670" elapsed="0.002397"/>
-</kw>
-<doc>Cria uma sessão HTTP para a API</doc>
-<status status="PASS" start="2025-10-27T14:37:36.336912" elapsed="0.003485"/>
-</kw>
-<kw name="Criar Headers Padrao" owner="base_api">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-10-27T14:37:36.342508" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
-<var>${headers}</var>
-<arg>Content-Type=${CONTENT_TYPE}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.341774" elapsed="0.001009"/>
-</kw>
-<return>
-<value>${headers}</value>
-<status status="PASS" start="2025-10-27T14:37:36.343047" elapsed="0.000250"/>
-</return>
-<msg time="2025-10-27T14:37:36.343719" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
-<var>${headers}</var>
-<doc>Cria headers padrão para requisições</doc>
-<status status="PASS" start="2025-10-27T14:37:36.340864" elapsed="0.003087"/>
-</kw>
-<kw name="Log Request Details" owner="base_api">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-27T14:37:36.346282" level="INFO">🔵 REQUEST: POST /auth/register</msg>
-<arg>🔵 REQUEST: ${method} ${endpoint}</arg>
+<msg time="2025-10-28T14:05:59.590573" level="INFO">Navegador aberto</msg>
+<arg>Navegador aberto</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.345643" elapsed="0.047322"/>
+<status status="PASS" start="2025-10-28T14:05:59.589879" elapsed="0.009318"/>
+</kw>
+<doc>Abre o navegador configurado (Brave ou Chrome)</doc>
+<status status="PASS" start="2025-10-28T14:05:57.495302" elapsed="2.104296"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-28T14:05:59.600742" level="INFO">Suite de testes Web iniciada</msg>
+<arg>Suite de testes Web iniciada</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-28T14:05:59.600130" elapsed="0.002576"/>
+</kw>
+<doc>Prepara navegador para os testes</doc>
+<status status="PASS" start="2025-10-28T14:05:57.494068" elapsed="2.109027"/>
+</kw>
+<test id="s1-t1" name="TC_WEB_006 - Acessar detalhes de um filme deve mostrar informacoes completas" line="26">
+<kw name="Acessar Aplicacao" owner="base_page" type="SETUP">
+<kw name="New Page" owner="Browser">
+<msg time="2025-10-28T14:06:00.323674" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/</msg>
+<arg>${WEB_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-10-28T14:05:59.613576" elapsed="0.710639"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-28T14:06:00.325327" level="INFO">Acessando aplicação: http://localhost:3002/</msg>
+<arg>Acessando aplicação: ${WEB_URL}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-28T14:06:00.324606" elapsed="0.011710"/>
+</kw>
+<doc>Navega para a home da aplicação</doc>
+<status status="PASS" start="2025-10-28T14:05:59.612385" elapsed="0.724315"/>
+</kw>
+<kw name="Validar Que Estou Na Home" owner="home_page">
+<kw name="Aguardar Carregamento" owner="base_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-28T14:06:02.341720" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-28T14:06:00.339453" elapsed="2.002619"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-28T14:06:02.393714" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
+<arg>.loading, .spinner, [data-loading]</arg>
+<arg>hidden</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-28T14:06:02.343162" elapsed="0.050839"/>
+</kw>
+<arg>Wait For Elements State</arg>
+<arg>.loading, .spinner, [data-loading]</arg>
+<arg>hidden</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-28T14:06:02.342390" elapsed="0.051753"/>
+</kw>
+<doc>Aguarda indicadores de carregamento sumirem</doc>
+<status status="PASS" start="2025-10-28T14:06:00.338574" elapsed="2.055730"/>
+</kw>
+<kw name="Get Url" owner="Browser">
+<msg time="2025-10-28T14:06:02.401386" level="INFO">${current_url} = http://localhost:3002/</msg>
+<var>${current_url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2025-10-28T14:06:02.394502" elapsed="0.007768"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${WEB_URL}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-10-28T14:06:02.402685" elapsed="0.000682"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-28T14:06:02.404780" level="INFO">✅ Está na Home</msg>
+<arg>✅ Está na Home</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-28T14:06:02.403734" elapsed="0.001546"/>
+</kw>
+<doc>Valida que está na página inicial</doc>
+<status status="PASS" start="2025-10-28T14:06:00.337628" elapsed="2.067934"/>
+</kw>
+<kw name="Validar Lista De Filmes Visivel" owner="home_page">
+<kw name="Aguardar Carregamento" owner="base_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-28T14:06:04.408920" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-28T14:06:02.408042" elapsed="2.001194"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-28T14:06:04.420841" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
+<arg>.loading, .spinner, [data-loading]</arg>
+<arg>hidden</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-28T14:06:04.410025" elapsed="0.011282"/>
+</kw>
+<arg>Wait For Elements State</arg>
+<arg>.loading, .spinner, [data-loading]</arg>
+<arg>hidden</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-28T14:06:04.409511" elapsed="0.011958"/>
+</kw>
+<doc>Aguarda indicadores de carregamento sumirem</doc>
+<status status="PASS" start="2025-10-28T14:06:02.407162" elapsed="2.014417"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2025-10-28T14:06:04.430911" level="INFO">${cards_count} = 3</msg>
+<var>${cards_count}</var>
+<arg>${MOVIE_CARDS}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2025-10-28T14:06:04.421787" elapsed="0.009340"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${cards_count} &gt; 0</arg>
+<arg>msg=Nenhum filme encontrado na página</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-10-28T14:06:04.431371" elapsed="0.000584"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-28T14:06:04.432589" level="INFO">✅ 3 filmes encontrados</msg>
+<arg>✅ ${cards_count} filmes encontrados</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-28T14:06:04.432177" elapsed="0.001251"/>
+</kw>
+<doc>Valida que a lista de filmes está sendo exibida</doc>
+<status status="PASS" start="2025-10-28T14:06:02.406271" elapsed="2.027373"/>
+</kw>
+<kw name="Clicar No Primeiro Filme" owner="home_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-28T14:06:06.435519" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-28T14:06:04.434865" elapsed="2.001101"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-28T14:06:06.437188" level="INFO">${first_card} = .movie-card, [data-testid="movie-card"], .card &gt;&gt; nth=0</msg>
+<var>${first_card}</var>
+<arg>${MOVIE_CARDS} &gt;&gt; nth=0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-28T14:06:06.436382" elapsed="0.000971"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-28T14:06:06.452824" level="INFO">Waited for Element with selector .movie-card, [data-testid="movie-card"], .card &gt;&gt; nth=0 at state visible</msg>
+<arg>${first_card}</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-28T14:06:06.438284" elapsed="0.014835"/>
+</kw>
+<msg time="2025-10-28T14:06:06.453297" level="INFO">${card_exists} = True</msg>
+<var>${card_exists}</var>
+<arg>Wait For Elements State</arg>
+<arg>${first_card}</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-28T14:06:06.437627" elapsed="0.015796"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-10-27T14:37:36.397010" level="INFO">Body: {'name': 'Pietro da Luz', 'email': 'teste_79874241@cinema.com', 'password': 'Senha@123'}</msg>
-<arg>Body: ${body}</arg>
-<arg>console=True</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.394330" elapsed="0.030601"/>
-</kw>
-<arg>${body} is not ${NONE}</arg>
-<arg>Log</arg>
-<arg>Body: ${body}</arg>
-<arg>console=True</arg>
+<arg>not ${card_exists}</arg>
+<arg>Fail</arg>
+<arg>Nenhum card de filme encontrado!</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.393501" elapsed="0.032040"/>
+<status status="PASS" start="2025-10-28T14:06:06.453770" elapsed="0.001294"/>
 </kw>
-<arg>POST</arg>
-<arg>${AUTH_REGISTER}</arg>
-<arg>${user_data}</arg>
-<doc>Loga detalhes da requisição para debug</doc>
-<status status="PASS" start="2025-10-27T14:37:36.344424" elapsed="0.081651"/>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Run Keywords" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-28T14:06:09.466247" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2025-10-28T14:06:09.466607" level="INFO">See also file:///C:/Users/kauar/OneDrive/%C3%81rea%20de%20Trabalho/challenge-final/playwright-log.txt for additional details.</msg>
+<msg time="2025-10-28T14:06:09.467216" level="FAIL">Error: Could not find active page</msg>
+<arg>${first_card} button</arg>
+<arg>visible</arg>
+<arg>timeout=3s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2025-10-28T14:06:06.456800" elapsed="3.019918">Error: Could not find active page</status>
 </kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-10-27T14:37:36.934458" level="INFO">POST Request : url=http://localhost:3000/api/v1/auth/register 
- path_url=/api/v1/auth/register 
- headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '88'} 
- body=b'{"name": "Pietro da Luz", "email": "teste_79874241@cinema.com", "password": "Senha@123"}' 
- </msg>
-<msg time="2025-10-27T14:37:36.935882" level="INFO">POST Response : url=http://localhost:3000/api/v1/auth/register 
- status=201, reason=Created 
- headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '313', 'ETag': 'W/"139-Axemttkz8LokdKhiVjBHZnwb9B8"', 'Date': 'Mon, 27 Oct 2025 17:37:36 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
- body={"success":true,"data":{"_id":"68ffade0b1f8a163bb0e355a","name":"Pietro da Luz","email":"teste_79874241@cinema.com","role":"user","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmZhZGUwYjFmOGExNjNiYjBlMzU1YSIsImlhdCI6MTc2MTU4NjY1NiwiZXhwIjoxNzY1NDc0NjU2fQ.64zuXtTl5AhqCG9AnTkqlnSergL-b_DKth4n4Zgru1Y"}} 
- </msg>
-<msg time="2025-10-27T14:37:36.936387" level="INFO">${response} = &lt;Response [201]&gt;</msg>
-<var>${response}</var>
-<arg>cinema_api</arg>
-<arg>${AUTH_REGISTER}</arg>
-<arg>json=${user_data}</arg>
-<arg>headers=${headers}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.426711" elapsed="0.509834"/>
+<arg>Wait For Elements State</arg>
+<arg>${first_card} button</arg>
+<arg>visible</arg>
+<arg>timeout=3s</arg>
+<arg>AND</arg>
+<arg>Click</arg>
+<arg>${first_card} button</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="FAIL" start="2025-10-28T14:06:06.456267" elapsed="3.020759">Error: Could not find active page</status>
 </kw>
-<kw name="Log Response Details" owner="base_api">
+<msg time="2025-10-28T14:06:09.477220" level="INFO">${button_clicked} = False</msg>
+<var>${button_clicked}</var>
+<arg>Run Keywords</arg>
+<arg>Wait For Elements State</arg>
+<arg>${first_card} button</arg>
+<arg>visible</arg>
+<arg>timeout=3s</arg>
+<arg>AND</arg>
+<arg>Click</arg>
+<arg>${first_card} button</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-28T14:06:06.455539" elapsed="3.021769"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click" owner="Browser">
+<msg time="2025-10-28T14:06:09.479334" level="INFO">Clicks the element '.movie-card, [data-testid="movie-card"], .card &gt;&gt; nth=0 a'.</msg>
+<msg time="2025-10-28T14:06:09.495216" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2025-10-28T14:06:09.495513" level="INFO">See also file:///C:/Users/kauar/OneDrive/%C3%81rea%20de%20Trabalho/challenge-final/playwright-log.txt for additional details.</msg>
+<msg time="2025-10-28T14:06:09.495731" level="FAIL">Error: Could not find active page</msg>
+<arg>${first_card} a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="FAIL" start="2025-10-28T14:06:09.478656" elapsed="0.041066">Error: Could not find active page</status>
+</kw>
+<arg>Click</arg>
+<arg>${first_card} a</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-28T14:06:09.478167" elapsed="0.041831"/>
+</kw>
+<arg>not ${button_clicked}</arg>
+<arg>Run Keyword And Ignore Error</arg>
+<arg>Click</arg>
+<arg>${first_card} a</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-10-28T14:06:09.477532" elapsed="0.042632"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click" owner="Browser">
+<msg time="2025-10-28T14:06:09.522168" level="INFO">Clicks the element '.movie-card, [data-testid="movie-card"], .card &gt;&gt; nth=0'.</msg>
+<msg time="2025-10-28T14:06:09.529674" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2025-10-28T14:06:09.530117" level="INFO">See also file:///C:/Users/kauar/OneDrive/%C3%81rea%20de%20Trabalho/challenge-final/playwright-log.txt for additional details.</msg>
+<msg time="2025-10-28T14:06:09.530347" level="FAIL">Error: Could not find active page</msg>
+<arg>${first_card}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="FAIL" start="2025-10-28T14:06:09.521207" elapsed="0.012166">Error: Could not find active page</status>
+</kw>
+<arg>not ${button_clicked}</arg>
+<arg>Click</arg>
+<arg>${first_card}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="FAIL" start="2025-10-28T14:06:09.520477" elapsed="0.013278">Error: Could not find active page</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-28T14:06:09.534107" elapsed="0.000271"/>
+</kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-27T14:37:36.938346" level="INFO">RESPONSE: Status 201</msg>
-<arg>RESPONSE: Status ${response.status_code}</arg>
+<arg>🎬 Clicou no primeiro filme</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.937467" elapsed="0.001362"/>
+<status status="NOT RUN" start="2025-10-28T14:06:09.534634" elapsed="0.000212"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-10-27T14:37:36.940060" level="INFO">Body: {"success":true,"data":{"_id":"68ffade0b1f8a163bb0e355a","name":"Pietro da Luz","email":"teste_79874241@cinema.com","role":"user","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmZhZGUwYjFmOGExNjNiYjBlMzU1YSIsImlhdCI6MTc2MTU4NjY1NiwiZXhwIjoxNzY1NDc0NjU2fQ.64zuXtTl5AhqCG9AnTkqlnSergL-b_DKth4n4Zgru1Y"}}</msg>
-<arg>Body: ${response.text}</arg>
-<arg>console=True</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.939124" elapsed="0.001698"/>
+<doc>Clica no primeiro filme da lista</doc>
+<status status="FAIL" start="2025-10-28T14:06:04.434185" elapsed="5.100888">Error: Could not find active page</status>
 </kw>
-<arg>${response}</arg>
-<doc>Loga detalhes da resposta para debug</doc>
-<status status="PASS" start="2025-10-27T14:37:36.936914" elapsed="0.004299"/>
+<kw name="Validar Que Estou Na Pagina De Detalhes" owner="movie_detail_page">
+<doc>Valida que está na página de detalhes do filme</doc>
+<status status="NOT RUN" start="2025-10-28T14:06:09.535646" elapsed="0.000346"/>
 </kw>
-<return>
-<value>${response}</value>
-<status status="PASS" start="2025-10-27T14:37:36.941496" elapsed="0.000268"/>
-</return>
-<msg time="2025-10-27T14:37:36.942299" level="INFO">${response} = &lt;Response [201]&gt;</msg>
-<var>${response}</var>
-<arg>${user_data}</arg>
-<doc>Registra um novo usuário via API</doc>
-<status status="PASS" start="2025-10-27T14:37:36.336028" elapsed="0.606559"/>
+<kw name="Validar Informacoes Do Filme Visiveis" owner="movie_detail_page">
+<doc>Valida que as informações principais do filme estão visíveis</doc>
+<status status="NOT RUN" start="2025-10-28T14:06:09.536535" elapsed="0.000325"/>
 </kw>
-<kw name="Validar Status Code" owner="base_api">
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2025-10-27T14:37:36.947389" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${response.status_code}</arg>
-<arg>${expected_status}</arg>
-<arg>msg=Status code esperado: ${expected_status}, recebido: ${response.status_code}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.944315" elapsed="0.003470"/>
-</kw>
-<arg>${response}</arg>
-<arg>201</arg>
-<doc>Valida o status code da resposta</doc>
-<status status="PASS" start="2025-10-27T14:37:36.943489" elapsed="0.004776"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-27T14:37:36.950616" level="INFO">${response_json} = {'success': True, 'data': {'_id': '68ffade0b1f8a163bb0e355a', 'name': 'Pietro da Luz', 'email': 'teste_79874241@cinema.com', 'role': 'user', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4...</msg>
-<var>${response_json}</var>
-<arg>${response.json()}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.949412" elapsed="0.001465"/>
-</kw>
-<kw name="Validar Campo Existe" owner="base_api">
-<kw name="Dictionary Should Contain Key" owner="Collections">
-<arg>${response_json}</arg>
-<arg>${field}</arg>
-<arg>msg=Campo '${field}' não encontrado na resposta</arg>
-<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.952699" elapsed="0.000855"/>
-</kw>
-<arg>${response_json}</arg>
-<arg>success</arg>
-<doc>Valida que um campo existe no JSON de resposta</doc>
-<status status="PASS" start="2025-10-27T14:37:36.951854" elapsed="0.002024"/>
-</kw>
-<kw name="Validar Campo Existe" owner="base_api">
-<kw name="Dictionary Should Contain Key" owner="Collections">
-<arg>${response_json}</arg>
-<arg>${field}</arg>
-<arg>msg=Campo '${field}' não encontrado na resposta</arg>
-<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.955220" elapsed="0.000504"/>
-</kw>
-<arg>${response_json}</arg>
-<arg>data</arg>
-<doc>Valida que um campo existe no JSON de resposta</doc>
-<status status="PASS" start="2025-10-27T14:37:36.954619" elapsed="0.001312"/>
-</kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-10-27T14:37:36.957248" level="INFO">${data} = {'_id': '68ffade0b1f8a163bb0e355a', 'name': 'Pietro da Luz', 'email': 'teste_79874241@cinema.com', 'role': 'user', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmZhZGUwYjFmOGExNjNiYjBlMz...</msg>
-<var>${data}</var>
-<arg>${response_json}</arg>
-<arg>data</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.956755" elapsed="0.000687"/>
-</kw>
-<kw name="Validar Campo Nao Vazio" owner="base_api">
-<kw name="Validar Campo Existe" owner="base_api">
-<kw name="Dictionary Should Contain Key" owner="Collections">
-<arg>${response_json}</arg>
-<arg>${field}</arg>
-<arg>msg=Campo '${field}' não encontrado na resposta</arg>
-<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.960039" elapsed="0.000705"/>
-</kw>
-<arg>${response_json}</arg>
-<arg>${field}</arg>
-<doc>Valida que um campo existe no JSON de resposta</doc>
-<status status="PASS" start="2025-10-27T14:37:36.959234" elapsed="0.001838"/>
-</kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-10-27T14:37:36.962769" level="INFO">${value} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmZhZGUwYjFmOGExNjNiYjBlMzU1YSIsImlhdCI6MTc2MTU4NjY1NiwiZXhwIjoxNzY1NDc0NjU2fQ.64zuXtTl5AhqCG9AnTkqlnSergL-b_DKth4n4Zgru1Y</msg>
-<var>${value}</var>
-<arg>${response_json}</arg>
-<arg>${field}</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.961845" elapsed="0.001206"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-10-27T14:37:36.963901" level="INFO">Length is 171.</msg>
-<arg>${value}</arg>
-<arg>msg=Campo '${field}' está vazio</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.963414" elapsed="0.000774"/>
-</kw>
-<arg>${data}</arg>
-<arg>token</arg>
-<doc>Valida que um campo existe e não está vazio</doc>
-<status status="PASS" start="2025-10-27T14:37:36.958339" elapsed="0.006069"/>
-</kw>
-<kw name="Validar Campo Nao Vazio" owner="base_api">
-<kw name="Validar Campo Existe" owner="base_api">
-<kw name="Dictionary Should Contain Key" owner="Collections">
-<arg>${response_json}</arg>
-<arg>${field}</arg>
-<arg>msg=Campo '${field}' não encontrado na resposta</arg>
-<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.968241" elapsed="0.000574"/>
-</kw>
-<arg>${response_json}</arg>
-<arg>${field}</arg>
-<doc>Valida que um campo existe no JSON de resposta</doc>
-<status status="PASS" start="2025-10-27T14:37:36.966766" elapsed="0.002294"/>
-</kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-10-27T14:37:36.969684" level="INFO">${value} = 68ffade0b1f8a163bb0e355a</msg>
-<var>${value}</var>
-<arg>${response_json}</arg>
-<arg>${field}</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.969312" elapsed="0.000528"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-10-27T14:37:36.970439" level="INFO">Length is 24.</msg>
-<arg>${value}</arg>
-<arg>msg=Campo '${field}' está vazio</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.970047" elapsed="0.000641"/>
-</kw>
-<arg>${data}</arg>
-<arg>_id</arg>
-<doc>Valida que um campo existe e não está vazio</doc>
-<status status="PASS" start="2025-10-27T14:37:36.965674" elapsed="0.005243"/>
-</kw>
-<kw name="Validar Campo Nao Vazio" owner="base_api">
-<kw name="Validar Campo Existe" owner="base_api">
-<kw name="Dictionary Should Contain Key" owner="Collections">
-<arg>${response_json}</arg>
-<arg>${field}</arg>
-<arg>msg=Campo '${field}' não encontrado na resposta</arg>
-<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.973909" elapsed="0.000542"/>
-</kw>
-<arg>${response_json}</arg>
-<arg>${field}</arg>
-<doc>Valida que um campo existe no JSON de resposta</doc>
-<status status="PASS" start="2025-10-27T14:37:36.973337" elapsed="0.001363"/>
-</kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-10-27T14:37:36.975638" level="INFO">${value} = Pietro da Luz</msg>
-<var>${value}</var>
-<arg>${response_json}</arg>
-<arg>${field}</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.975178" elapsed="0.000625"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-10-27T14:37:36.976415" level="INFO">Length is 13.</msg>
-<arg>${value}</arg>
-<arg>msg=Campo '${field}' está vazio</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.976036" elapsed="0.000565"/>
-</kw>
-<arg>${data}</arg>
-<arg>name</arg>
-<doc>Valida que um campo existe e não está vazio</doc>
-<status status="PASS" start="2025-10-27T14:37:36.972635" elapsed="0.004442"/>
-</kw>
-<kw name="Validar Campo Nao Vazio" owner="base_api">
-<kw name="Validar Campo Existe" owner="base_api">
-<kw name="Dictionary Should Contain Key" owner="Collections">
-<arg>${response_json}</arg>
-<arg>${field}</arg>
-<arg>msg=Campo '${field}' não encontrado na resposta</arg>
-<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.980692" elapsed="0.001589"/>
-</kw>
-<arg>${response_json}</arg>
-<arg>${field}</arg>
-<doc>Valida que um campo existe no JSON de resposta</doc>
-<status status="PASS" start="2025-10-27T14:37:36.979408" elapsed="0.003342"/>
-</kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-10-27T14:37:36.983726" level="INFO">${value} = teste_79874241@cinema.com</msg>
-<var>${value}</var>
-<arg>${response_json}</arg>
-<arg>${field}</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.983112" elapsed="0.000845"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-10-27T14:37:36.984683" level="INFO">Length is 25.</msg>
-<arg>${value}</arg>
-<arg>msg=Campo '${field}' está vazio</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.984250" elapsed="0.000633"/>
-</kw>
-<arg>${data}</arg>
-<arg>email</arg>
-<doc>Valida que um campo existe e não está vazio</doc>
-<status status="PASS" start="2025-10-27T14:37:36.978025" elapsed="0.007037"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${data['email']}</arg>
-<arg>${user_data['email']}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.985861" elapsed="0.002001"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${data['name']}</arg>
-<arg>${user_data['name']}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.988612" elapsed="0.001884"/>
-</kw>
-<kw name="Dictionary Should Not Contain Key" owner="Collections">
-<arg>${data}</arg>
-<arg>password</arg>
-<arg>msg=Senha não deve ser retornada na resposta</arg>
-<doc>Fails if ``key`` is found from ``dictionary``.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.991257" elapsed="0.000718"/>
-</kw>
-<doc>Valida que é possível registrar um novo usuário com dados válidos</doc>
-<tag>api</tag>
-<tag>auth</tag>
-<tag>register</tag>
-<status status="PASS" start="2025-10-27T14:37:36.322176" elapsed="0.670588"/>
+<doc>Valida navegação para página de detalhes do filme</doc>
+<tag>detail</tag>
+<tag>movies</tag>
+<tag>p0</tag>
+<tag>smoke</tag>
+<tag>web</tag>
+<status status="FAIL" start="2025-10-28T14:05:59.603342" elapsed="9.934018">Error: Could not find active page</status>
 </test>
-<kw name="Log" owner="BuiltIn" type="TEARDOWN">
-<msg time="2025-10-27T14:37:36.996678" level="INFO">Testes de Registro finalizados</msg>
-<arg>Testes de Registro finalizados</arg>
+<kw name="Fechar Navegador" owner="base_page" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-10-28T14:06:09.922346" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-28T14:06:09.548775" elapsed="0.374037"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-28T14:06:09.923742" level="INFO">Navegador fechado</msg>
+<arg>Navegador fechado</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-27T14:37:36.995471" elapsed="0.001838"/>
+<status status="PASS" start="2025-10-28T14:06:09.923181" elapsed="0.001017"/>
 </kw>
-<doc>Testes de registro de usuários no Cinema APP</doc>
-<status status="PASS" start="2025-10-27T14:37:35.418957" elapsed="1.578691"/>
+<doc>Fecha o navegador</doc>
+<status status="PASS" start="2025-10-28T14:06:09.543272" elapsed="0.381194"/>
+</kw>
+<doc>Testes de navegação e visualização de filmes na interface web</doc>
+<status status="FAIL" start="2025-10-28T14:05:56.456033" elapsed="13.468581"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">api</stat>
-<stat pass="1" fail="0" skip="0">auth</stat>
-<stat pass="1" fail="0" skip="0">register</stat>
+<stat pass="0" fail="1" skip="0">detail</stat>
+<stat pass="0" fail="1" skip="0">movies</stat>
+<stat pass="0" fail="1" skip="0">p0</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+<stat pass="0" fail="1" skip="0">web</stat>
 </tag>
 <suite>
-<stat name="Register" id="s1" pass="1" fail="0" skip="0">Register</stat>
+<stat name="Browse Movies" id="s1" pass="0" fail="1" skip="0">Browse Movies</stat>
 </suite>
 </statistics>
 <errors>
