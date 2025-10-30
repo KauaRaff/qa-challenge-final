@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-28T15:12:48.542793" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-29T14:53:19.339835" rpa="false" schemaversion="5">
 <suite id="s1" name="Web" source="C:\Users\kauar\OneDrive\Área de Trabalho\challenge-final\cinema-app-automation\tests\web">
 <suite id="s1-s1" name="Auth" source="C:\Users\kauar\OneDrive\Área de Trabalho\challenge-final\cinema-app-automation\tests\web\auth">
 <suite id="s1-s1-s1" name="Profile" source="C:\Users\kauar\OneDrive\Área de Trabalho\challenge-final\cinema-app-automation\tests\web\auth\profile.robot">
 <kw name="Preparar Navegador E Fazer Login" type="SETUP">
 <kw name="Abrir Navegador" owner="base_page">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-10-28T15:12:49.389755" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "executablePath": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe", "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\kauar\\OneDrive\\\u00c1rea de Trabalho\\challenge-final\\results\\browser\\traces\\temp\\1d8feee8-8811-457d-a239-17775987aa43"}</msg>
-<msg time="2025-10-28T15:12:49.434660" level="INFO">Starting Browser process C:\Users\kauar\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:64394</msg>
-<msg time="2025-10-28T15:12:50.894136" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"executablePath":"C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe","handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\kauar\\OneDrive\\Área de Trabalho\\challenge-final\\results\\browser\\traces\\temp\\1d8feee8-8811-457d-a239-17775987aa43"}</msg>
+<msg time="2025-10-29T14:53:20.190489" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "executablePath": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe", "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\kauar\\OneDrive\\\u00c1rea de Trabalho\\challenge-final\\results\\browser\\traces\\temp\\0b75011d-0af1-417d-a5ba-21cefe02036c"}</msg>
+<msg time="2025-10-29T14:53:20.233731" level="INFO">Starting Browser process C:\Users\kauar\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:59318</msg>
+<msg time="2025-10-29T14:53:22.191516" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"executablePath":"C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe","handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\kauar\\OneDrive\\Área de Trabalho\\challenge-final\\results\\browser\\traces\\temp\\0b75011d-0af1-417d-a5ba-21cefe02036c"}</msg>
 <arg>${BROWSER}</arg>
 <arg>headless=${HEADLESS}</arg>
 <arg>executablePath=${BRAVE_PATH}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-10-28T15:12:49.388940" elapsed="1.505509"/>
+<status status="PASS" start="2025-10-29T14:53:20.189692" elapsed="2.002144"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-10-28T15:12:50.898608" level="INFO">{
+<msg time="2025-10-29T14:53:22.196407" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -28,142 +28,142 @@
   "reducedMotion": "no-preference",
   "serviceWorkers": "allow",
   "viewport": {
-    "width": 1920,
-    "height": 1080
+    "height": 1080,
+    "width": 1920
   }
 }</msg>
-<msg time="2025-10-28T15:12:50.928526" level="INFO">Successfully created context. </msg>
-<msg time="2025-10-28T15:12:50.928683" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+<msg time="2025-10-29T14:53:22.223688" level="INFO">Successfully created context. </msg>
+<msg time="2025-10-29T14:53:22.223825" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
 <arg>viewport={'width': 1920, 'height': 1080}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-10-28T15:12:50.894919" elapsed="0.033916"/>
+<status status="PASS" start="2025-10-29T14:53:22.192212" elapsed="0.031769"/>
 </kw>
 <kw name="Set Browser Timeout" owner="Browser">
 <arg>${TIMEOUT}</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<status status="PASS" start="2025-10-28T15:12:50.929193" elapsed="0.007490"/>
+<status status="PASS" start="2025-10-29T14:53:22.224319" elapsed="0.007570"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-28T15:12:50.937372" level="INFO">Navegador aberto</msg>
+<msg time="2025-10-29T14:53:22.232732" level="INFO">Navegador aberto</msg>
 <arg>Navegador aberto</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-28T15:12:50.936974" elapsed="0.000690"/>
+<status status="PASS" start="2025-10-29T14:53:22.232226" elapsed="0.001969"/>
 </kw>
 <doc>Abre o navegador configurado (Brave ou Chrome)</doc>
-<status status="PASS" start="2025-10-28T15:12:49.388020" elapsed="1.549801"/>
+<status status="PASS" start="2025-10-29T14:53:20.188627" elapsed="2.045766"/>
 </kw>
 <kw name="Acessar Aplicacao" owner="base_page">
 <kw name="New Page" owner="Browser">
-<msg time="2025-10-28T15:12:51.556300" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/</msg>
+<msg time="2025-10-29T14:53:24.277679" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/</msg>
 <arg>${WEB_URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-10-28T15:12:50.938584" elapsed="0.617911"/>
+<status status="PASS" start="2025-10-29T14:53:22.235241" elapsed="2.042722"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-28T15:12:51.557577" level="INFO">Acessando aplicação: http://localhost:3002/</msg>
+<msg time="2025-10-29T14:53:24.278780" level="INFO">Acessando aplicação: http://localhost:3002/</msg>
 <arg>Acessando aplicação: ${WEB_URL}</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-28T15:12:51.556822" elapsed="0.001004"/>
+<status status="PASS" start="2025-10-29T14:53:24.278243" elapsed="0.000745"/>
 </kw>
 <doc>Navega para a home da aplicação</doc>
-<status status="PASS" start="2025-10-28T15:12:50.938098" elapsed="0.619912"/>
+<status status="PASS" start="2025-10-29T14:53:22.234694" elapsed="2.044456"/>
 </kw>
 <kw name="Login Como Usuario Web" owner="base_page">
 <kw name="Fazer Login Via API e Injetar Token" owner="base_page">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-28T15:12:51.560284" level="INFO">Fazendo login via API e injetando token...</msg>
+<msg time="2025-10-29T14:53:24.280883" level="INFO">Fazendo login via API e injetando token...</msg>
 <arg>Fazendo login via API e injetando token...</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-28T15:12:51.559712" elapsed="0.001268"/>
+<status status="PASS" start="2025-10-29T14:53:24.280510" elapsed="0.001309"/>
 </kw>
 <kw name="Fazer Login" owner="auth_service">
 <kw name="Criar Sessao da API" owner="base_api">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-10-28T15:12:51.563737" level="INFO">Creating Session using : alias=cinema_api, url=http://localhost:3000/api/v1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-10-29T14:53:24.284087" level="INFO">Creating Session using : alias=cinema_api, url=http://localhost:3000/api/v1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>cinema_api</arg>
 <arg>${BASE_URL}</arg>
 <arg>verify=False</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-10-28T15:12:51.563213" elapsed="0.000881"/>
+<status status="PASS" start="2025-10-29T14:53:24.283485" elapsed="0.000938"/>
 </kw>
 <doc>Cria uma sessão HTTP para a API</doc>
-<status status="PASS" start="2025-10-28T15:12:51.562613" elapsed="0.001662"/>
+<status status="PASS" start="2025-10-29T14:53:24.282894" elapsed="0.001678"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-10-28T15:12:51.565253" level="INFO">${credentials} = {'email': 'test@example.com', 'password': 'password123'}</msg>
+<msg time="2025-10-29T14:53:24.285583" level="INFO">${credentials} = {'email': 'test@example.com', 'password': 'password123'}</msg>
 <var>${credentials}</var>
 <arg>email=${email}</arg>
 <arg>password=${password}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-10-28T15:12:51.564532" elapsed="0.000764"/>
+<status status="PASS" start="2025-10-29T14:53:24.284790" elapsed="0.000857"/>
 </kw>
 <kw name="Criar Headers Padrao" owner="base_api">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-10-28T15:12:51.566271" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<msg time="2025-10-29T14:53:24.286827" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
 <var>${headers}</var>
 <arg>Content-Type=${CONTENT_TYPE}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-10-28T15:12:51.565926" elapsed="0.000387"/>
+<status status="PASS" start="2025-10-29T14:53:24.286411" elapsed="0.000458"/>
 </kw>
 <return>
 <value>${headers}</value>
-<status status="PASS" start="2025-10-28T15:12:51.566386" elapsed="0.000140"/>
+<status status="PASS" start="2025-10-29T14:53:24.286965" elapsed="0.000190"/>
 </return>
-<msg time="2025-10-28T15:12:51.566695" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<msg time="2025-10-29T14:53:24.287353" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
 <var>${headers}</var>
 <doc>Cria headers padrão para requisições</doc>
-<status status="PASS" start="2025-10-28T15:12:51.565542" elapsed="0.001179"/>
+<status status="PASS" start="2025-10-29T14:53:24.285932" elapsed="0.001455"/>
 </kw>
 <kw name="Log Request Details" owner="base_api">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-28T15:12:51.567552" level="INFO">🔵 REQUEST: POST /auth/login</msg>
+<msg time="2025-10-29T14:53:24.288554" level="INFO">🔵 REQUEST: POST /auth/login</msg>
 <arg>🔵 REQUEST: ${method} ${endpoint}</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-28T15:12:51.567261" elapsed="0.000593"/>
+<status status="PASS" start="2025-10-29T14:53:24.288124" elapsed="0.000975"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-28T15:12:51.569122" level="INFO">Body: {'email': 'test@example.com', 'password': 'password123'}</msg>
+<msg time="2025-10-29T14:53:24.290709" level="INFO">Body: {'email': 'test@example.com', 'password': 'password123'}</msg>
 <arg>Body: ${body}</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-28T15:12:51.568708" elapsed="0.000726"/>
+<status status="PASS" start="2025-10-29T14:53:24.290178" elapsed="0.000975"/>
 </kw>
 <arg>${body} is not ${NONE}</arg>
 <arg>Log</arg>
 <arg>Body: ${body}</arg>
 <arg>console=True</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-10-28T15:12:51.568089" elapsed="0.001501"/>
+<status status="PASS" start="2025-10-29T14:53:24.289362" elapsed="0.002187"/>
 </kw>
 <arg>POST</arg>
 <arg>${AUTH_LOGIN}</arg>
 <arg>${credentials}</arg>
 <doc>Loga detalhes da requisição para debug</doc>
-<status status="PASS" start="2025-10-28T15:12:51.566871" elapsed="0.003022"/>
+<status status="PASS" start="2025-10-29T14:53:24.287595" elapsed="0.004577"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-10-28T15:12:51.761378" level="INFO">POST Request : url=http://localhost:3000/api/v1/auth/login 
+<msg time="2025-10-29T14:53:24.367823" level="INFO">POST Request : url=http://localhost:3000/api/v1/auth/login 
  path_url=/api/v1/auth/login 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '56'} 
  body=b'{"email": "test@example.com", "password": "password123"}' 
  </msg>
-<msg time="2025-10-28T15:12:51.761592" level="INFO">POST Response : url=http://localhost:3000/api/v1/auth/login 
- status=200, reason=OK 
- headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '300', 'ETag': 'W/"12c-YJWR9ZYnt450g0nPtgq0dF9bhsM"', 'Date': 'Tue, 28 Oct 2025 18:12:51 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
- body={"success":true,"data":{"_id":"6900f12a66b92e98760c5c2e","name":"Test User","email":"test@example.com","role":"user","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDBmMTJhNjZiOTJlOTg3NjBjNWMyZSIsImlhdCI6MTc2MTY3NTE3MSwiZXhwIjoxNzY1NTYzMTcxfQ.OUeTkfINkmUThcQD_tD-yHyIr5LssjALmI8rKHK-HzY"}} 
+<msg time="2025-10-29T14:53:24.367937" level="INFO">POST Response : url=http://localhost:3000/api/v1/auth/login 
+ status=401, reason=Unauthorized 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '55', 'ETag': 'W/"37-5uDpJTljPBecOPs/j7OXFdPRcmQ"', 'Date': 'Wed, 29 Oct 2025 17:53:24 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body={"success":false,"message":"Invalid email or password"} 
  </msg>
-<msg time="2025-10-28T15:12:51.761803" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-10-29T14:53:24.368093" level="INFO">${response} = &lt;Response [401]&gt;</msg>
 <var>${response}</var>
 <arg>cinema_api</arg>
 <arg>${AUTH_LOGIN}</arg>
@@ -171,94 +171,83 @@
 <arg>headers=${headers}</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-10-28T15:12:51.570110" elapsed="0.191741"/>
+<status status="PASS" start="2025-10-29T14:53:24.292436" elapsed="0.075697"/>
 </kw>
 <kw name="Log Response Details" owner="base_api">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-28T15:12:51.764016" level="INFO">RESPONSE: Status 200</msg>
+<msg time="2025-10-29T14:53:24.370024" level="INFO">RESPONSE: Status 401</msg>
 <arg>RESPONSE: Status ${response.status_code}</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-28T15:12:51.762944" elapsed="0.002032"/>
+<status status="PASS" start="2025-10-29T14:53:24.369077" elapsed="0.001149"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-28T15:12:51.766492" level="INFO">Body: {"success":true,"data":{"_id":"6900f12a66b92e98760c5c2e","name":"Test User","email":"test@example.com","role":"user","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDBmMTJhNjZiOTJlOTg3NjBjNWMyZSIsImlhdCI6MTc2MTY3NTE3MSwiZXhwIjoxNzY1NTYzMTcxfQ.OUeTkfINkmUThcQD_tD-yHyIr5LssjALmI8rKHK-HzY"}}</msg>
+<msg time="2025-10-29T14:53:24.371848" level="INFO">Body: {"success":false,"message":"Invalid email or password"}</msg>
 <arg>Body: ${response.text}</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-28T15:12:51.765393" elapsed="0.001447"/>
+<status status="PASS" start="2025-10-29T14:53:24.370477" elapsed="0.001585"/>
 </kw>
 <arg>${response}</arg>
 <doc>Loga detalhes da resposta para debug</doc>
-<status status="PASS" start="2025-10-28T15:12:51.762233" elapsed="0.004772"/>
+<status status="PASS" start="2025-10-29T14:53:24.368414" elapsed="0.003775"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" start="2025-10-28T15:12:51.767132" elapsed="0.000349"/>
+<status status="PASS" start="2025-10-29T14:53:24.372259" elapsed="0.000229"/>
 </return>
-<msg time="2025-10-28T15:12:51.767727" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-10-29T14:53:24.372706" level="INFO">${response} = &lt;Response [401]&gt;</msg>
 <var>${response}</var>
 <arg>${email}</arg>
 <arg>${password}</arg>
 <doc>Realiza login e retorna a resposta completa</doc>
-<status status="PASS" start="2025-10-28T15:12:51.561789" elapsed="0.205970"/>
+<status status="PASS" start="2025-10-29T14:53:24.282199" elapsed="0.090538"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2025-10-28T15:12:51.769037" level="INFO">Argument types are:
+<msg time="2025-10-29T14:53:24.373835" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
+<msg time="2025-10-29T14:53:24.374108" level="FAIL">401 != 200</msg>
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-10-28T15:12:51.767970" elapsed="0.001146"/>
+<status status="FAIL" start="2025-10-29T14:53:24.372886" elapsed="0.001541">401 != 200</status>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-28T15:12:51.770430" level="INFO">${response_json} = {'success': True, 'data': {'_id': '6900f12a66b92e98760c5c2e', 'name': 'Test User', 'email': 'test@example.com', 'role': 'user', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDBmMTJhNjZiO...</msg>
 <var>${response_json}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-28T15:12:51.769296" elapsed="0.001192"/>
+<status status="NOT RUN" start="2025-10-29T14:53:24.374904" elapsed="0.000454"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-10-28T15:12:51.771307" level="INFO">${data} = {'_id': '6900f12a66b92e98760c5c2e', 'name': 'Test User', 'email': 'test@example.com', 'role': 'user', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDBmMTJhNjZiOTJlOTg3NjBjNWMyZSIsImlhdCI...</msg>
 <var>${data}</var>
 <arg>${response_json}</arg>
 <arg>data</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-10-28T15:12:51.770744" elapsed="0.000616"/>
+<status status="NOT RUN" start="2025-10-29T14:53:24.375696" elapsed="0.000212"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-10-28T15:12:51.771986" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDBmMTJhNjZiOTJlOTg3NjBjNWMyZSIsImlhdCI6MTc2MTY3NTE3MSwiZXhwIjoxNzY1NTYzMTcxfQ.OUeTkfINkmUThcQD_tD-yHyIr5LssjALmI8rKHK-HzY</msg>
 <var>${token}</var>
 <arg>${data}</arg>
 <arg>token</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-10-28T15:12:51.771587" elapsed="0.000442"/>
+<status status="NOT RUN" start="2025-10-29T14:53:24.376153" elapsed="0.000221"/>
 </kw>
 <kw name="Evaluate JavaScript" owner="Browser">
-<msg time="2025-10-28T15:13:22.076084" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<msg time="2025-10-28T15:13:22.076347" level="INFO">See also file:///C:/Users/kauar/OneDrive/%C3%81rea%20de%20Trabalho/challenge-final/results/playwright-log.txt for additional details.</msg>
-<msg time="2025-10-28T15:13:22.077606" level="FAIL">TimeoutError: locator.evaluate: Timeout 30000ms exceeded.
-Call log:
-  - waiting for locator('None')
-</msg>
 <arg>None</arg>
 <arg>window.localStorage.setItem('token', '${token}')</arg>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Executes given javascript on the selected element(s) or on page.</doc>
-<status status="FAIL" start="2025-10-28T15:12:51.772197" elapsed="30.335599">TimeoutError: locator.evaluate: Timeout 30000ms exceeded.
-Call log:
-  - waiting for locator('None')
-</status>
+<status status="NOT RUN" start="2025-10-29T14:53:24.376588" elapsed="0.000176"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
 <var>${user_json}</var>
 <arg>json.dumps($data)</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2025-10-28T15:13:22.108186" elapsed="0.000194"/>
+<status status="NOT RUN" start="2025-10-29T14:53:24.376961" elapsed="0.000152"/>
 </kw>
 <kw name="Evaluate JavaScript" owner="Browser">
 <arg>None</arg>
@@ -267,51 +256,42 @@ Call log:
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Executes given javascript on the selected element(s) or on page.</doc>
-<status status="NOT RUN" start="2025-10-28T15:13:22.108537" elapsed="0.000104"/>
+<status status="NOT RUN" start="2025-10-29T14:53:24.377300" elapsed="0.000129"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
 <arg>Token JWT injetado no localStorage</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2025-10-28T15:13:22.108791" elapsed="0.000194"/>
+<status status="NOT RUN" start="2025-10-29T14:53:24.377619" elapsed="0.000128"/>
 </kw>
 <kw name="Reload" owner="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Reloads current active page.</doc>
-<status status="NOT RUN" start="2025-10-28T15:13:22.109188" elapsed="0.000154"/>
+<status status="NOT RUN" start="2025-10-29T14:53:24.377907" elapsed="0.000137"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-10-28T15:13:22.109491" elapsed="0.000115"/>
+<status status="NOT RUN" start="2025-10-29T14:53:24.378185" elapsed="0.000131"/>
 </kw>
 <arg>${USER_EMAIL}</arg>
 <arg>${USER_PASSWORD}</arg>
 <doc>WORKAROUND: Faz login via API e injeta token no localStorage
 Necessário porque login/register não funcionam no front</doc>
-<status status="FAIL" start="2025-10-28T15:12:51.559085" elapsed="30.550699">TimeoutError: locator.evaluate: Timeout 30000ms exceeded.
-Call log:
-  - waiting for locator('None')
-</status>
+<status status="FAIL" start="2025-10-29T14:53:24.279950" elapsed="0.098584">401 != 200</status>
 </kw>
 <doc>Helper para login como usuário comum via API + injeção de token</doc>
-<status status="FAIL" start="2025-10-28T15:12:51.558304" elapsed="30.551737">TimeoutError: locator.evaluate: Timeout 30000ms exceeded.
-Call log:
-  - waiting for locator('None')
-</status>
+<status status="FAIL" start="2025-10-29T14:53:24.279386" elapsed="0.099280">401 != 200</status>
 </kw>
 <kw name="Log" owner="BuiltIn">
 <arg>🔐 Login realizado com sucesso</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2025-10-28T15:13:22.110180" elapsed="0.000136"/>
+<status status="NOT RUN" start="2025-10-29T14:53:24.378834" elapsed="0.000200"/>
 </kw>
 <doc>Prepara navegador e faz login antes dos testes</doc>
-<status status="FAIL" start="2025-10-28T15:12:49.387454" elapsed="32.722973">TimeoutError: locator.evaluate: Timeout 30000ms exceeded.
-Call log:
-  - waiting for locator('None')
-</status>
+<status status="FAIL" start="2025-10-29T14:53:20.188058" elapsed="4.191150">401 != 200</status>
 </kw>
 <test id="s1-s1-s1-t1" name="TC_WEB_036 - Verificar carregamento da pagina de perfil" line="14">
 <doc>Verifica se a página de perfil carrega corretamente</doc>
@@ -319,22 +299,16 @@ Call log:
 <tag>profile</tag>
 <tag>smoke</tag>
 <tag>web</tag>
-<status status="FAIL" start="2025-10-28T15:13:22.110542" elapsed="0.006194">Parent suite setup failed:
-TimeoutError: locator.evaluate: Timeout 30000ms exceeded.
-Call log:
-  - waiting for locator('None')
-</status>
+<status status="FAIL" start="2025-10-29T14:53:24.379455" elapsed="0.074174">Parent suite setup failed:
+401 != 200</status>
 </test>
 <test id="s1-s1-s1-t2" name="TC_WEB_037 - Verificar informacoes do usuario carregadas" line="22">
 <doc>Verifica se as informações do usuário estão preenchidas</doc>
 <tag>p0</tag>
 <tag>profile</tag>
 <tag>web</tag>
-<status status="FAIL" start="2025-10-28T15:13:22.123354" elapsed="0.005211">Parent suite setup failed:
-TimeoutError: locator.evaluate: Timeout 30000ms exceeded.
-Call log:
-  - waiting for locator('None')
-</status>
+<status status="FAIL" start="2025-10-29T14:53:24.469062" elapsed="0.009530">Parent suite setup failed:
+401 != 200</status>
 </test>
 <test id="s1-s1-s1-t3" name="TC_WEB_039 - Alterar nome do usuario" line="31">
 <doc>Testa a funcionalidade de alteração do nome</doc>
@@ -342,11 +316,8 @@ Call log:
 <tag>p1</tag>
 <tag>profile</tag>
 <tag>web</tag>
-<status status="FAIL" start="2025-10-28T15:13:22.134580" elapsed="0.004279">Parent suite setup failed:
-TimeoutError: locator.evaluate: Timeout 30000ms exceeded.
-Call log:
-  - waiting for locator('None')
-</status>
+<status status="FAIL" start="2025-10-29T14:53:24.507443" elapsed="0.007467">Parent suite setup failed:
+401 != 200</status>
 </test>
 <test id="s1-s1-s1-t4" name="TC_WEB_040 - Verificar secao de alteracao de senha" line="47">
 <doc>Verifica a presença da seção de alteração de senha</doc>
@@ -354,11 +325,8 @@ Call log:
 <tag>password</tag>
 <tag>profile</tag>
 <tag>web</tag>
-<status status="FAIL" start="2025-10-28T15:13:22.144086" elapsed="0.003913">Parent suite setup failed:
-TimeoutError: locator.evaluate: Timeout 30000ms exceeded.
-Call log:
-  - waiting for locator('None')
-</status>
+<status status="FAIL" start="2025-10-29T14:53:24.524450" elapsed="0.012603">Parent suite setup failed:
+401 != 200</status>
 </test>
 <test id="s1-s1-s1-t5" name="TC_WEB_041 - Verificar botao salvar desabilitado sem alteracoes" line="55">
 <doc>Verifica que o botão salvar fica desabilitado sem alterações</doc>
@@ -366,11 +334,8 @@ Call log:
 <tag>profile</tag>
 <tag>validation</tag>
 <tag>web</tag>
-<status status="FAIL" start="2025-10-28T15:13:22.152701" elapsed="0.004413">Parent suite setup failed:
-TimeoutError: locator.evaluate: Timeout 30000ms exceeded.
-Call log:
-  - waiting for locator('None')
-</status>
+<status status="FAIL" start="2025-10-29T14:53:24.545879" elapsed="0.005454">Parent suite setup failed:
+401 != 200</status>
 </test>
 <test id="s1-s1-s1-t6" name="TC_WEB_046 - Alternar entre abas" line="62">
 <doc>Testa a funcionalidade de alternância entre as abas</doc>
@@ -378,11 +343,8 @@ Call log:
 <tag>p1</tag>
 <tag>profile</tag>
 <tag>web</tag>
-<status status="FAIL" start="2025-10-28T15:13:22.163636" elapsed="0.003541">Parent suite setup failed:
-TimeoutError: locator.evaluate: Timeout 30000ms exceeded.
-Call log:
-  - waiting for locator('None')
-</status>
+<status status="FAIL" start="2025-10-29T14:53:24.557838" elapsed="0.005786">Parent suite setup failed:
+401 != 200</status>
 </test>
 <test id="s1-s1-s1-t7" name="TC_WEB_048 - Limpar campo nome e validar" line="74">
 <doc>Verifica validação ao limpar o campo nome</doc>
@@ -390,56 +352,50 @@ Call log:
 <tag>profile</tag>
 <tag>validation</tag>
 <tag>web</tag>
-<status status="FAIL" start="2025-10-28T15:13:22.172408" elapsed="0.003922">Parent suite setup failed:
-TimeoutError: locator.evaluate: Timeout 30000ms exceeded.
-Call log:
-  - waiting for locator('None')
-</status>
+<status status="FAIL" start="2025-10-29T14:53:24.569573" elapsed="0.004379">Parent suite setup failed:
+401 != 200</status>
 </test>
 <kw name="Fechar Navegador" owner="base_page" type="TEARDOWN">
 <kw name="Close Browser" owner="Browser">
-<msg time="2025-10-28T15:13:22.468976" level="INFO">Closed browser</msg>
+<msg time="2025-10-29T14:53:24.795954" level="INFO">Closed browser</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-10-28T15:13:22.182863" elapsed="0.286345"/>
+<status status="PASS" start="2025-10-29T14:53:24.583497" elapsed="0.212608"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-28T15:13:22.470136" level="INFO">Navegador fechado</msg>
+<msg time="2025-10-29T14:53:24.796713" level="INFO">Navegador fechado</msg>
 <arg>Navegador fechado</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-28T15:13:22.469476" elapsed="0.000932"/>
+<status status="PASS" start="2025-10-29T14:53:24.796343" elapsed="0.000567"/>
 </kw>
 <doc>Fecha o navegador</doc>
-<status status="PASS" start="2025-10-28T15:13:22.182498" elapsed="0.288036"/>
+<status status="PASS" start="2025-10-29T14:53:24.583011" elapsed="0.214016"/>
 </kw>
 <doc>Testes da página de perfil do usuário</doc>
-<status status="FAIL" start="2025-10-28T15:12:48.579844" elapsed="33.890741">Suite setup failed:
-TimeoutError: locator.evaluate: Timeout 30000ms exceeded.
-Call log:
-  - waiting for locator('None')
-</status>
+<status status="FAIL" start="2025-10-29T14:53:19.372545" elapsed="5.424535">Suite setup failed:
+401 != 200</status>
 </suite>
-<status status="FAIL" start="2025-10-28T15:12:48.578433" elapsed="33.912555"/>
+<status status="FAIL" start="2025-10-29T14:53:19.371258" elapsed="5.431996"/>
 </suite>
 <suite id="s1-s2" name="Movies" source="C:\Users\kauar\OneDrive\Área de Trabalho\challenge-final\cinema-app-automation\tests\web\movies">
 <suite id="s1-s2-s1" name="Browse Movies" source="C:\Users\kauar\OneDrive\Área de Trabalho\challenge-final\cinema-app-automation\tests\web\movies\browse_movies.robot">
 <kw name="Preparar Navegador" type="SETUP">
 <kw name="Abrir Navegador" owner="base_page">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-10-28T15:13:22.514687" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "executablePath": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe", "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\kauar\\OneDrive\\\u00c1rea de Trabalho\\challenge-final\\results\\browser\\traces\\temp\\0b49c9d6-3955-49b3-bb13-3b8e212afed6"}</msg>
-<msg time="2025-10-28T15:13:22.744639" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"executablePath":"C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe","handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\kauar\\OneDrive\\Área de Trabalho\\challenge-final\\results\\browser\\traces\\temp\\0b49c9d6-3955-49b3-bb13-3b8e212afed6"}</msg>
+<msg time="2025-10-29T14:53:24.827467" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "executablePath": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe", "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\kauar\\OneDrive\\\u00c1rea de Trabalho\\challenge-final\\results\\browser\\traces\\temp\\7df534f0-5f08-4260-8680-5d3c4629f0ec"}</msg>
+<msg time="2025-10-29T14:53:25.160135" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"executablePath":"C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe","handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\kauar\\OneDrive\\Área de Trabalho\\challenge-final\\results\\browser\\traces\\temp\\7df534f0-5f08-4260-8680-5d3c4629f0ec"}</msg>
 <arg>${BROWSER}</arg>
 <arg>headless=${HEADLESS}</arg>
 <arg>executablePath=${BRAVE_PATH}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-10-28T15:13:22.513915" elapsed="0.230969"/>
+<status status="PASS" start="2025-10-29T14:53:24.826547" elapsed="0.334112"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-10-28T15:13:22.748342" level="INFO">{
+<msg time="2025-10-29T14:53:25.165019" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -449,361 +405,1521 @@ Call log:
   "reducedMotion": "no-preference",
   "serviceWorkers": "allow",
   "viewport": {
-    "width": 1920,
-    "height": 1080
+    "height": 1080,
+    "width": 1920
   }
 }</msg>
-<msg time="2025-10-28T15:13:22.777470" level="INFO">Successfully created context. </msg>
-<msg time="2025-10-28T15:13:22.777605" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+<msg time="2025-10-29T14:53:25.180055" level="INFO">Successfully created context. </msg>
+<msg time="2025-10-29T14:53:25.180206" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
 <arg>viewport={'width': 1920, 'height': 1080}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-10-28T15:13:22.745171" elapsed="0.032574"/>
+<status status="PASS" start="2025-10-29T14:53:25.161028" elapsed="0.019297"/>
 </kw>
 <kw name="Set Browser Timeout" owner="Browser">
 <arg>${TIMEOUT}</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<status status="PASS" start="2025-10-28T15:13:22.778074" elapsed="0.005977"/>
+<status status="PASS" start="2025-10-29T14:53:25.180629" elapsed="0.004727"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-28T15:13:22.785282" level="INFO">Navegador aberto</msg>
+<msg time="2025-10-29T14:53:25.186121" level="INFO">Navegador aberto</msg>
 <arg>Navegador aberto</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-28T15:13:22.784715" elapsed="0.015330"/>
+<status status="PASS" start="2025-10-29T14:53:25.185689" elapsed="0.011669"/>
 </kw>
 <doc>Abre o navegador configurado (Brave ou Chrome)</doc>
-<status status="PASS" start="2025-10-28T15:13:22.513662" elapsed="0.286670"/>
+<status status="PASS" start="2025-10-29T14:53:24.826253" elapsed="0.371351"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-28T15:13:22.801057" level="INFO">Suite de testes Web iniciada</msg>
+<msg time="2025-10-29T14:53:25.198401" level="INFO">Suite de testes Web iniciada</msg>
 <arg>Suite de testes Web iniciada</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-28T15:13:22.800586" elapsed="0.000951"/>
+<status status="PASS" start="2025-10-29T14:53:25.197870" elapsed="0.003954"/>
 </kw>
 <doc>Prepara navegador para os testes</doc>
-<status status="PASS" start="2025-10-28T15:13:22.513200" elapsed="0.288543"/>
+<status status="PASS" start="2025-10-29T14:53:24.825699" elapsed="0.376350"/>
 </kw>
 <test id="s1-s2-s1-t1" name="TC_WEB_005 - Visualizar lista de filmes na home deve exibir cards corretamente" line="13">
 <kw name="Acessar Aplicacao" owner="base_page" type="SETUP">
 <kw name="New Page" owner="Browser">
-<msg time="2025-10-28T15:13:23.552916" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/</msg>
+<msg time="2025-10-29T14:53:25.928912" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/</msg>
 <arg>${WEB_URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-10-28T15:13:22.834559" elapsed="0.718652"/>
+<status status="PASS" start="2025-10-29T14:53:25.210462" elapsed="0.718977"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-28T15:13:23.553997" level="INFO">Acessando aplicação: http://localhost:3002/</msg>
+<msg time="2025-10-29T14:53:25.930416" level="INFO">Acessando aplicação: http://localhost:3002/</msg>
 <arg>Acessando aplicação: ${WEB_URL}</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-28T15:13:23.553492" elapsed="0.000803"/>
+<status status="PASS" start="2025-10-29T14:53:25.929798" elapsed="0.001090"/>
 </kw>
 <doc>Navega para a home da aplicação</doc>
-<status status="PASS" start="2025-10-28T15:13:22.833374" elapsed="0.721097"/>
+<status status="PASS" start="2025-10-29T14:53:25.208894" elapsed="0.722111"/>
 </kw>
 <kw name="Validar Que Estou Na Home" owner="home_page">
 <kw name="Aguardar Carregamento" owner="base_page">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-28T15:13:25.557270" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-10-29T14:53:27.933223" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-28T15:13:23.556290" elapsed="2.001097"/>
+<status status="PASS" start="2025-10-29T14:53:25.932333" elapsed="2.000999"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-10-28T15:13:25.581865" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
+<msg time="2025-10-29T14:53:27.968013" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
 <arg>.loading, .spinner, [data-loading]</arg>
 <arg>hidden</arg>
 <arg>timeout=${timeout}</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-10-28T15:13:25.557991" elapsed="0.024012"/>
+<status status="PASS" start="2025-10-29T14:53:27.934071" elapsed="0.034092"/>
 </kw>
 <arg>Wait For Elements State</arg>
 <arg>.loading, .spinner, [data-loading]</arg>
 <arg>hidden</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-10-28T15:13:25.557584" elapsed="0.024517"/>
+<status status="PASS" start="2025-10-29T14:53:27.933653" elapsed="0.034665"/>
 </kw>
 <doc>Aguarda indicadores de carregamento sumirem</doc>
-<status status="PASS" start="2025-10-28T15:13:23.555710" elapsed="2.026456"/>
+<status status="PASS" start="2025-10-29T14:53:25.931935" elapsed="2.036456"/>
 </kw>
 <kw name="Get Url" owner="Browser">
-<msg time="2025-10-28T15:13:25.584547" level="INFO">${current_url} = http://localhost:3002/</msg>
+<msg time="2025-10-29T14:53:27.971143" level="INFO">${current_url} = http://localhost:3002/</msg>
 <var>${current_url}</var>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the current URL.</doc>
-<status status="PASS" start="2025-10-28T15:13:25.582291" elapsed="0.002300"/>
+<status status="PASS" start="2025-10-29T14:53:27.968522" elapsed="0.002665"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${current_url}</arg>
 <arg>${WEB_URL}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-10-28T15:13:25.584782" elapsed="0.000390"/>
+<status status="PASS" start="2025-10-29T14:53:27.971365" elapsed="0.000398"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-10-28T15:13:25.593752" level="INFO">Waited for Element with selector text="Welcome to Cinema App" at state visible</msg>
+<msg time="2025-10-29T14:53:27.980206" level="INFO">Waited for Element with selector text="Welcome to Cinema App" at state visible</msg>
 <arg>${HOME_TITLE}</arg>
 <arg>visible</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-10-28T15:13:25.585308" elapsed="0.008611"/>
+<status status="PASS" start="2025-10-29T14:53:27.971904" elapsed="0.008462"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-28T15:13:25.604877" level="INFO">✅ Está na Home</msg>
+<msg time="2025-10-29T14:53:27.980936" level="INFO">✅ Está na Home</msg>
 <arg>✅ Está na Home</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-28T15:13:25.594110" elapsed="0.011396"/>
+<status status="PASS" start="2025-10-29T14:53:27.980583" elapsed="0.000609"/>
 </kw>
 <doc>Valida que está na página inicial</doc>
-<status status="PASS" start="2025-10-28T15:13:23.554959" elapsed="2.050663"/>
+<status status="PASS" start="2025-10-29T14:53:25.931359" elapsed="2.049980"/>
 </kw>
 <kw name="Validar Lista De Filmes Visivel" owner="home_page">
 <kw name="Aguardar Carregamento" owner="base_page">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-28T15:13:27.607699" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-10-29T14:53:29.983581" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-28T15:13:25.606743" elapsed="2.001059"/>
+<status status="PASS" start="2025-10-29T14:53:27.982675" elapsed="2.001017"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-10-28T15:13:27.615979" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
+<msg time="2025-10-29T14:53:29.993644" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
 <arg>.loading, .spinner, [data-loading]</arg>
 <arg>hidden</arg>
 <arg>timeout=${timeout}</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-10-28T15:13:27.608287" elapsed="0.007907"/>
+<status status="PASS" start="2025-10-29T14:53:29.984248" elapsed="0.009559"/>
 </kw>
 <arg>Wait For Elements State</arg>
 <arg>.loading, .spinner, [data-loading]</arg>
 <arg>hidden</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-10-28T15:13:27.607958" elapsed="0.008326"/>
+<status status="PASS" start="2025-10-29T14:53:29.983873" elapsed="0.010044"/>
 </kw>
 <doc>Aguarda indicadores de carregamento sumirem</doc>
-<status status="PASS" start="2025-10-28T15:13:25.606339" elapsed="2.010025"/>
+<status status="PASS" start="2025-10-29T14:53:27.982319" elapsed="2.011667"/>
 </kw>
 <kw name="Get Element Count" owner="Browser">
-<msg time="2025-10-28T15:13:27.623180" level="INFO">${cards_count} = 3</msg>
+<msg time="2025-10-29T14:53:30.000624" level="INFO">${cards_count} = 3</msg>
 <var>${cards_count}</var>
 <arg>${MOVIE_CARDS}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the count of elements found with ``selector``.</doc>
-<status status="PASS" start="2025-10-28T15:13:27.616556" elapsed="0.006667"/>
+<status status="PASS" start="2025-10-29T14:53:29.994133" elapsed="0.006532"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${cards_count} &gt; 0</arg>
 <arg>msg=Nenhum filme encontrado na página</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2025-10-28T15:13:27.623387" elapsed="0.000432"/>
+<status status="PASS" start="2025-10-29T14:53:30.000816" elapsed="0.000397"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-28T15:13:27.624244" level="INFO">✅ 3 filmes encontrados</msg>
+<msg time="2025-10-29T14:53:30.001553" level="INFO">✅ 3 filmes encontrados</msg>
 <arg>✅ ${cards_count} filmes encontrados</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-28T15:13:27.623990" elapsed="0.000595"/>
+<status status="PASS" start="2025-10-29T14:53:30.001334" elapsed="0.000512"/>
 </kw>
 <doc>Valida que a lista de filmes está sendo exibida</doc>
-<status status="PASS" start="2025-10-28T15:13:25.605903" elapsed="2.018894"/>
+<status status="PASS" start="2025-10-29T14:53:27.981814" elapsed="2.020123"/>
 </kw>
 <kw name="Obter Quantidade De Filmes Exibidos" owner="home_page">
 <kw name="Aguardar Carregamento" owner="base_page">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-28T15:13:29.626776" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-10-29T14:53:32.003971" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-28T15:13:27.625748" elapsed="2.001182"/>
+<status status="PASS" start="2025-10-29T14:53:30.002825" elapsed="2.001314"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-10-28T15:13:29.635656" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
+<msg time="2025-10-29T14:53:32.013892" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
 <arg>.loading, .spinner, [data-loading]</arg>
 <arg>hidden</arg>
 <arg>timeout=${timeout}</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-10-28T15:13:29.627768" elapsed="0.008076"/>
+<status status="PASS" start="2025-10-29T14:53:32.004925" elapsed="0.009122"/>
 </kw>
 <arg>Wait For Elements State</arg>
 <arg>.loading, .spinner, [data-loading]</arg>
 <arg>hidden</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-10-28T15:13:29.627222" elapsed="0.008859"/>
+<status status="PASS" start="2025-10-29T14:53:32.004418" elapsed="0.009715"/>
 </kw>
 <doc>Aguarda indicadores de carregamento sumirem</doc>
-<status status="PASS" start="2025-10-28T15:13:27.625473" elapsed="2.010687"/>
+<status status="PASS" start="2025-10-29T14:53:30.002578" elapsed="2.011626"/>
 </kw>
 <kw name="Get Element Count" owner="Browser">
-<msg time="2025-10-28T15:13:29.641338" level="INFO">${count} = 3</msg>
+<msg time="2025-10-29T14:53:32.019333" level="INFO">${count} = 3</msg>
 <var>${count}</var>
 <arg>${MOVIE_CARDS}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the count of elements found with ``selector``.</doc>
-<status status="PASS" start="2025-10-28T15:13:29.636305" elapsed="0.005087"/>
+<status status="PASS" start="2025-10-29T14:53:32.014355" elapsed="0.005021"/>
 </kw>
 <return>
 <value>${count}</value>
-<status status="PASS" start="2025-10-28T15:13:29.641536" elapsed="0.000265"/>
+<status status="PASS" start="2025-10-29T14:53:32.019467" elapsed="0.000207"/>
 </return>
-<msg time="2025-10-28T15:13:29.641980" level="INFO">${filmes_count} = 3</msg>
+<msg time="2025-10-29T14:53:32.019926" level="INFO">${filmes_count} = 3</msg>
 <var>${filmes_count}</var>
 <doc>Retorna quantidade de filmes na tela</doc>
-<status status="PASS" start="2025-10-28T15:13:27.625143" elapsed="2.016862"/>
+<status status="PASS" start="2025-10-29T14:53:30.002267" elapsed="2.017703"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${filmes_count} &gt;= 1</arg>
 <arg>msg=Deve haver pelo menos 1 filme cadastrado</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2025-10-28T15:13:29.642328" elapsed="0.000414"/>
+<status status="PASS" start="2025-10-29T14:53:32.020361" elapsed="0.000535"/>
 </kw>
-<msg time="2025-10-28T15:13:29.651996" level="INFO">Switching browser to CURRENT</msg>
-<msg time="2025-10-28T15:13:29.654210" level="INFO">Returned active browser id. CURRENT</msg>
-<msg time="2025-10-28T15:13:29.655285" level="INFO">Switching browser to browser=02675598-c7fe-483d-a090-2dcc209a76c0</msg>
-<msg time="2025-10-28T15:13:29.658028" level="INFO">Successfully changed active browser: browser=02675598-c7fe-483d-a090-2dcc209a76c0</msg>
-<msg time="2025-10-28T15:13:29.658217" level="INFO">Switching context to context=2fb8329e-cd4f-42e0-a563-f3b011a86a64 in CURRENT</msg>
-<msg time="2025-10-28T15:13:29.667038" level="INFO">Successfully changed active context: context=2fb8329e-cd4f-42e0-a563-f3b011a86a64</msg>
-<msg time="2025-10-28T15:13:29.667142" level="INFO">Switching to page page=7a025d0c-f80f-4439-92ad-7c21065f8887,context CURRENT, browser CURRENT</msg>
-<msg time="2025-10-28T15:13:29.674410" level="INFO">Successfully changed active page: page=7a025d0c-f80f-4439-92ad-7c21065f8887</msg>
-<msg time="2025-10-28T15:13:29.700668" level="INFO">Successfully closed Page with runBeforeUnload false</msg>
+<msg time="2025-10-29T14:53:32.031014" level="INFO">Switching browser to CURRENT</msg>
+<msg time="2025-10-29T14:53:32.033868" level="INFO">Returned active browser id. CURRENT</msg>
+<msg time="2025-10-29T14:53:32.034924" level="INFO">Switching browser to browser=c2786334-17f1-4814-810b-91d336762bb1</msg>
+<msg time="2025-10-29T14:53:32.037812" level="INFO">Successfully changed active browser: browser=c2786334-17f1-4814-810b-91d336762bb1</msg>
+<msg time="2025-10-29T14:53:32.037965" level="INFO">Switching context to context=38d011e4-01d5-434e-988e-2701bc9c9f06 in CURRENT</msg>
+<msg time="2025-10-29T14:53:32.044787" level="INFO">Successfully changed active context: context=38d011e4-01d5-434e-988e-2701bc9c9f06</msg>
+<msg time="2025-10-29T14:53:32.044910" level="INFO">Switching to page page=c27f486e-6b95-4f65-bc42-590800154e9c,context CURRENT, browser CURRENT</msg>
+<msg time="2025-10-29T14:53:32.052020" level="INFO">Successfully changed active page: page=c27f486e-6b95-4f65-bc42-590800154e9c</msg>
+<msg time="2025-10-29T14:53:32.076974" level="INFO">Successfully closed Page with runBeforeUnload false</msg>
 <doc>Valida que a lista de filmes é exibida na página inicial</doc>
 <tag>home</tag>
 <tag>movies</tag>
 <tag>p0</tag>
 <tag>smoke</tag>
 <tag>web</tag>
-<status status="PASS" start="2025-10-28T15:13:22.801869" elapsed="6.841108"/>
+<status status="PASS" start="2025-10-29T14:53:25.202167" elapsed="6.819052"/>
 </test>
 <test id="s1-s2-s1-t2" name="TC_WEB_006 - Acessar detalhes de um filme deve mostrar informacoes completas" line="25">
 <kw name="Acessar Aplicacao" owner="base_page" type="SETUP">
 <kw name="New Page" owner="Browser">
-<msg time="2025-10-28T15:13:30.089613" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/</msg>
+<msg time="2025-10-29T14:53:32.449512" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/</msg>
 <arg>${WEB_URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-10-28T15:13:29.706578" elapsed="0.383326"/>
+<status status="PASS" start="2025-10-29T14:53:32.083296" elapsed="0.366398"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-28T15:13:30.090736" level="INFO">Acessando aplicação: http://localhost:3002/</msg>
+<msg time="2025-10-29T14:53:32.450289" level="INFO">Acessando aplicação: http://localhost:3002/</msg>
 <arg>Acessando aplicação: ${WEB_URL}</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-28T15:13:30.090185" elapsed="0.000831"/>
+<status status="PASS" start="2025-10-29T14:53:32.449862" elapsed="0.000645"/>
 </kw>
 <doc>Navega para a home da aplicação</doc>
-<status status="PASS" start="2025-10-28T15:13:29.705872" elapsed="0.385250"/>
+<status status="PASS" start="2025-10-29T14:53:32.082567" elapsed="0.368041"/>
 </kw>
 <kw name="Validar Que Estou Na Home" owner="home_page">
 <kw name="Aguardar Carregamento" owner="base_page">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-28T15:13:32.092516" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-10-29T14:53:34.452102" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-28T15:13:30.092079" elapsed="2.000558"/>
+<status status="PASS" start="2025-10-29T14:53:32.451623" elapsed="2.000645"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-10-28T15:13:32.116814" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
+<msg time="2025-10-29T14:53:34.477674" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
 <arg>.loading, .spinner, [data-loading]</arg>
 <arg>hidden</arg>
 <arg>timeout=${timeout}</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-10-28T15:13:32.093298" elapsed="0.023695"/>
+<status status="PASS" start="2025-10-29T14:53:34.452967" elapsed="0.024883"/>
 </kw>
 <arg>Wait For Elements State</arg>
 <arg>.loading, .spinner, [data-loading]</arg>
 <arg>hidden</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-10-28T15:13:32.092857" elapsed="0.024267"/>
+<status status="PASS" start="2025-10-29T14:53:34.452517" elapsed="0.025429"/>
 </kw>
 <doc>Aguarda indicadores de carregamento sumirem</doc>
-<status status="PASS" start="2025-10-28T15:13:30.091783" elapsed="2.025421"/>
+<status status="PASS" start="2025-10-29T14:53:32.451301" elapsed="2.026721"/>
 </kw>
 <kw name="Get Url" owner="Browser">
-<msg time="2025-10-28T15:13:32.119924" level="INFO">${current_url} = http://localhost:3002/</msg>
+<msg time="2025-10-29T14:53:34.480729" level="INFO">${current_url} = http://localhost:3002/</msg>
 <var>${current_url}</var>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the current URL.</doc>
-<status status="PASS" start="2025-10-28T15:13:32.117368" elapsed="0.002601"/>
+<status status="PASS" start="2025-10-29T14:53:34.478177" elapsed="0.002597"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${current_url}</arg>
 <arg>${WEB_URL}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-10-28T15:13:32.120149" elapsed="0.000344"/>
+<status status="PASS" start="2025-10-29T14:53:34.481095" elapsed="0.000629"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-10-28T15:13:32.127900" level="INFO">Waited for Element with selector text="Welcome to Cinema App" at state visible</msg>
+<msg time="2025-10-29T14:53:34.492117" level="INFO">Waited for Element with selector text="Welcome to Cinema App" at state visible</msg>
 <arg>${HOME_TITLE}</arg>
 <arg>visible</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-10-28T15:13:32.120635" elapsed="0.007426"/>
+<status status="PASS" start="2025-10-29T14:53:34.481993" elapsed="0.010345"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-28T15:13:32.128624" level="INFO">✅ Está na Home</msg>
+<msg time="2025-10-29T14:53:34.493002" level="INFO">✅ Está na Home</msg>
 <arg>✅ Está na Home</arg>
 <arg>console=True</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-28T15:13:32.128240" elapsed="0.000643"/>
+<status status="PASS" start="2025-10-29T14:53:34.492569" elapsed="0.000824"/>
 </kw>
 <doc>Valida que está na página inicial</doc>
-<status status="PASS" start="2025-10-28T15:13:30.091396" elapsed="2.037579"/>
+<status status="PASS" start="2025-10-29T14:53:32.450938" elapsed="2.042563"/>
 </kw>
 <kw name="Validar Lista De Filmes Visivel" owner="home_page">
 <kw name="Aguardar Carregamento" owner="base_page">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-28T15:13:34.130778" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-10-29T14:53:36.495379" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-28T15:13:32.129987" elapsed="2.000888"/>
+<status status="PASS" start="2025-10-29T14:53:34.494621" elapsed="2.000882"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-10-28T15:13:34.137794" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
+<msg time="2025-10-29T14:53:36.502873" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
 <arg>.loading, .spinner, [data-loading]</arg>
 <arg>hidden</arg>
 <arg>timeout=${timeout}</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-10-28T15:13:34.131377" elapsed="0.006564"/>
+<status status="PASS" start="2025-10-29T14:53:36.496144" elapsed="0.006960"/>
 </kw>
 <arg>Wait For Elements State</arg>
 <arg>.loading, .spinner, [data-loading]</arg>
 <arg>hidden</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-10-28T15:13:34.131049" elapsed="0.006986"/>
+<status status="PASS" start="2025-10-29T14:53:36.495708" elapsed="0.007529"/>
+</kw>
+<doc>Aguarda indicadores de carregamento sumirem</doc>
+<status status="PASS" start="2025-10-29T14:53:34.494272" elapsed="2.009059"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2025-10-29T14:53:36.510164" level="INFO">${cards_count} = 3</msg>
+<var>${cards_count}</var>
+<arg>${MOVIE_CARDS}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2025-10-29T14:53:36.503530" elapsed="0.006684"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${cards_count} &gt; 0</arg>
+<arg>msg=Nenhum filme encontrado na página</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-10-29T14:53:36.510417" elapsed="0.000501"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:53:36.511357" level="INFO">✅ 3 filmes encontrados</msg>
+<arg>✅ ${cards_count} filmes encontrados</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:53:36.511081" elapsed="0.000596"/>
+</kw>
+<doc>Valida que a lista de filmes está sendo exibida</doc>
+<status status="PASS" start="2025-10-29T14:53:34.493790" elapsed="2.017983"/>
+</kw>
+<kw name="Clicar No Primeiro Filme" owner="home_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-29T14:53:38.513495" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-29T14:53:36.512812" elapsed="2.000824"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-29T14:53:38.520229" level="INFO">Waited for Element with selector a.btn.btn-primary.btn-lg at state visible</msg>
+<arg>${MOVIE_CARD_BUTTON}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-29T14:53:38.513871" elapsed="0.006539"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-10-29T14:53:38.521224" level="INFO">Clicks the element 'a.btn.btn-primary.btn-lg &gt;&gt; nth=0'.</msg>
+<arg>${MOVIE_CARD_BUTTON} &gt;&gt; nth=0</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-29T14:53:38.520586" elapsed="0.075020"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-29T14:53:40.596826" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-29T14:53:38.595937" elapsed="2.001051"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:53:40.597768" level="INFO">🎬 Clicou no primeiro filme</msg>
+<arg>🎬 Clicou no primeiro filme</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:53:40.597248" elapsed="0.000975"/>
+</kw>
+<doc>Clica no primeiro filme da lista</doc>
+<status status="PASS" start="2025-10-29T14:53:36.512133" elapsed="4.086224"/>
+</kw>
+<kw name="Validar Que Estou Na Pagina De Detalhes" owner="movie_detail_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-29T14:53:42.599753" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-29T14:53:40.599197" elapsed="2.000745"/>
+</kw>
+<kw name="Get Url" owner="Browser">
+<msg time="2025-10-29T14:53:42.604130" level="INFO">${current_url} = http://localhost:3002/movies</msg>
+<var>${current_url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2025-10-29T14:53:42.600266" elapsed="0.003906"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:53:42.604867" level="INFO">URL atual: http://localhost:3002/movies</msg>
+<arg>URL atual: ${current_url}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:53:42.604344" elapsed="0.000876"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-29T14:53:47.896329" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-29T14:53:47.896542" level="INFO">See also file:///C:/Users/kauar/OneDrive/%C3%81rea%20de%20Trabalho/challenge-final/results/playwright-log.txt for additional details.</msg>
+<msg time="2025-10-29T14:53:47.897464" level="FAIL">TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator('main &gt; div &gt; div.featured-movies &gt; div &gt; div:nth-child(1) &gt; div.movie-info &gt; h3') to be visible
+</msg>
+<arg>${MOVIE_TITLE}</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2025-10-29T14:53:42.605978" elapsed="5.384924">TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator('main &gt; div &gt; div.featured-movies &gt; div &gt; div:nth-child(1) &gt; div.movie-info &gt; h3') to be visible
+</status>
+</kw>
+<msg time="2025-10-29T14:53:47.991052" level="INFO">${title_exists} = False</msg>
+<var>${title_exists}</var>
+<arg>Wait For Elements State</arg>
+<arg>${MOVIE_TITLE}</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-29T14:53:42.605491" elapsed="5.385587"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:53:47.991775" level="WARN">AVISO: Título do filme não encontrado!</msg>
+<arg>AVISO: Título do filme não encontrado!</arg>
+<arg>WARN</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:53:47.991587" elapsed="0.000587"/>
+</kw>
+<arg>not ${title_exists}</arg>
+<arg>Log</arg>
+<arg>AVISO: Título do filme não encontrado!</arg>
+<arg>WARN</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-10-29T14:53:47.991228" elapsed="0.001024"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:53:47.992670" level="INFO">✅ Está na página de detalhes</msg>
+<arg>✅ Está na página de detalhes</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:53:47.992371" elapsed="0.000534"/>
+</kw>
+<doc>Valida que está na página de detalhes do filme</doc>
+<status status="PASS" start="2025-10-29T14:53:40.598709" elapsed="7.394328"/>
+</kw>
+<kw name="Validar Informacoes Do Filme Visiveis" owner="movie_detail_page">
+<kw name="Elemento Deve Estar Visivel" owner="base_page">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-29T14:54:18.218025" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-29T14:54:18.218285" level="INFO">See also file:///C:/Users/kauar/OneDrive/%C3%81rea%20de%20Trabalho/challenge-final/results/playwright-log.txt for additional details.</msg>
+<msg time="2025-10-29T14:54:18.218454" level="FAIL">TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('main &gt; div &gt; div.featured-movies &gt; div &gt; div:nth-child(1) &gt; div.movie-info &gt; h3') to be visible
+</msg>
+<arg>${selector}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2025-10-29T14:53:47.994220" elapsed="30.226531">TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('main &gt; div &gt; div.featured-movies &gt; div &gt; div:nth-child(1) &gt; div.movie-info &gt; h3') to be visible
+</status>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Elemento visível: ${selector}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-10-29T14:54:18.220986" elapsed="0.000546"/>
+</kw>
+<arg>${MOVIE_TITLE}</arg>
+<doc>Valida que elemento está visível</doc>
+<status status="FAIL" start="2025-10-29T14:53:47.993806" elapsed="30.227965">TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('main &gt; div &gt; div.featured-movies &gt; div &gt; div:nth-child(1) &gt; div.movie-info &gt; h3') to be visible
+</status>
+</kw>
+<kw name="Elemento Deve Estar Visivel" owner="base_page">
+<arg>${MOVIE_DESCRIPTION}</arg>
+<doc>Valida que elemento está visível</doc>
+<status status="NOT RUN" start="2025-10-29T14:54:18.221970" elapsed="0.000160"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Informações do filme visíveis</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-10-29T14:54:18.222283" elapsed="0.000104"/>
+</kw>
+<doc>Valida que as informações principais do filme estão visíveis</doc>
+<status status="FAIL" start="2025-10-29T14:53:47.993327" elapsed="30.229169">TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('main &gt; div &gt; div.featured-movies &gt; div &gt; div:nth-child(1) &gt; div.movie-info &gt; h3') to be visible
+</status>
+</kw>
+<msg time="2025-10-29T14:54:18.231595" level="INFO">Switching browser to CURRENT</msg>
+<msg time="2025-10-29T14:54:18.233712" level="INFO">Returned active browser id. CURRENT</msg>
+<msg time="2025-10-29T14:54:18.235118" level="INFO">Switching browser to browser=c2786334-17f1-4814-810b-91d336762bb1</msg>
+<msg time="2025-10-29T14:54:18.238468" level="INFO">Successfully changed active browser: browser=c2786334-17f1-4814-810b-91d336762bb1</msg>
+<msg time="2025-10-29T14:54:18.238622" level="INFO">Switching context to context=38d011e4-01d5-434e-988e-2701bc9c9f06 in CURRENT</msg>
+<msg time="2025-10-29T14:54:18.246521" level="INFO">Successfully changed active context: context=38d011e4-01d5-434e-988e-2701bc9c9f06</msg>
+<msg time="2025-10-29T14:54:18.246683" level="INFO">Switching to page page=3e426fab-1bb9-4546-abcc-11709b15e8f2,context CURRENT, browser CURRENT</msg>
+<msg time="2025-10-29T14:54:18.253262" level="INFO">Successfully changed active page: page=3e426fab-1bb9-4546-abcc-11709b15e8f2</msg>
+<msg time="2025-10-29T14:54:18.276222" level="INFO">Successfully closed Page with runBeforeUnload false</msg>
+<doc>Valida navegação para página de detalhes do filme</doc>
+<tag>detail</tag>
+<tag>movies</tag>
+<tag>p0</tag>
+<tag>smoke</tag>
+<tag>web</tag>
+<status status="FAIL" start="2025-10-29T14:53:32.078094" elapsed="46.144729">TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('main &gt; div &gt; div.featured-movies &gt; div &gt; div:nth-child(1) &gt; div.movie-info &gt; h3') to be visible
+</status>
+</test>
+<test id="s1-s2-s1-t3" name="TC_WEB_006B - Pagina de detalhes deve mostrar sessoes disponiveis" line="39">
+<kw name="Acessar Aplicacao" owner="base_page" type="SETUP">
+<kw name="New Page" owner="Browser">
+<msg time="2025-10-29T14:54:18.666232" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/</msg>
+<arg>${WEB_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-10-29T14:54:18.281639" elapsed="0.384805"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:18.667263" level="INFO">Acessando aplicação: http://localhost:3002/</msg>
+<arg>Acessando aplicação: ${WEB_URL}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:18.666736" elapsed="0.000770"/>
+</kw>
+<doc>Navega para a home da aplicação</doc>
+<status status="PASS" start="2025-10-29T14:54:18.280867" elapsed="0.386794"/>
+</kw>
+<kw name="Validar Que Estou Na Home" owner="home_page">
+<kw name="Aguardar Carregamento" owner="base_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-29T14:54:20.669424" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-29T14:54:18.668851" elapsed="2.000699"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-29T14:54:20.691506" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
+<arg>.loading, .spinner, [data-loading]</arg>
+<arg>hidden</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-29T14:54:20.670178" elapsed="0.021471"/>
+</kw>
+<arg>Wait For Elements State</arg>
+<arg>.loading, .spinner, [data-loading]</arg>
+<arg>hidden</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-29T14:54:20.669760" elapsed="0.021974"/>
+</kw>
+<doc>Aguarda indicadores de carregamento sumirem</doc>
+<status status="PASS" start="2025-10-29T14:54:18.668486" elapsed="2.023318"/>
+</kw>
+<kw name="Get Url" owner="Browser">
+<msg time="2025-10-29T14:54:20.694493" level="INFO">${current_url} = http://localhost:3002/</msg>
+<var>${current_url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2025-10-29T14:54:20.691938" elapsed="0.002610"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${WEB_URL}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-10-29T14:54:20.694754" elapsed="0.000394"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-29T14:54:20.701906" level="INFO">Waited for Element with selector text="Welcome to Cinema App" at state visible</msg>
+<arg>${HOME_TITLE}</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-29T14:54:20.695290" elapsed="0.006769"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:20.702572" level="INFO">✅ Está na Home</msg>
+<arg>✅ Está na Home</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:20.702239" elapsed="0.000613"/>
+</kw>
+<doc>Valida que está na página inicial</doc>
+<status status="PASS" start="2025-10-29T14:54:18.668020" elapsed="2.034944"/>
+</kw>
+<kw name="Clicar No Primeiro Filme" owner="home_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-29T14:54:22.704584" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-29T14:54:20.703586" elapsed="2.001140"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-29T14:54:22.712624" level="INFO">Waited for Element with selector a.btn.btn-primary.btn-lg at state visible</msg>
+<arg>${MOVIE_CARD_BUTTON}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-29T14:54:22.704971" elapsed="0.007802"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-10-29T14:54:22.713490" level="INFO">Clicks the element 'a.btn.btn-primary.btn-lg &gt;&gt; nth=0'.</msg>
+<arg>${MOVIE_CARD_BUTTON} &gt;&gt; nth=0</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-10-29T14:54:22.712933" elapsed="0.052228"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-29T14:54:24.766343" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-29T14:54:22.765476" elapsed="2.001001"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:24.767139" level="INFO">🎬 Clicou no primeiro filme</msg>
+<arg>🎬 Clicou no primeiro filme</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:24.766696" elapsed="0.000839"/>
+</kw>
+<doc>Clica no primeiro filme da lista</doc>
+<status status="PASS" start="2025-10-29T14:54:20.703220" elapsed="4.064469"/>
+</kw>
+<kw name="Validar Que Estou Na Pagina De Detalhes" owner="movie_detail_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-29T14:54:26.769749" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-29T14:54:24.768719" elapsed="2.001193"/>
+</kw>
+<kw name="Get Url" owner="Browser">
+<msg time="2025-10-29T14:54:26.773923" level="INFO">${current_url} = http://localhost:3002/movies</msg>
+<var>${current_url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2025-10-29T14:54:26.770183" elapsed="0.003800"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:26.774682" level="INFO">URL atual: http://localhost:3002/movies</msg>
+<arg>URL atual: ${current_url}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:26.774212" elapsed="0.000712"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-29T14:54:32.009265" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-3.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-3.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-29T14:54:32.009381" level="INFO">See also file:///C:/Users/kauar/OneDrive/%C3%81rea%20de%20Trabalho/challenge-final/results/playwright-log.txt for additional details.</msg>
+<msg time="2025-10-29T14:54:32.009474" level="FAIL">TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator('main &gt; div &gt; div.featured-movies &gt; div &gt; div:nth-child(1) &gt; div.movie-info &gt; h3') to be visible
+</msg>
+<arg>${MOVIE_TITLE}</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2025-10-29T14:54:26.775345" elapsed="5.235583">TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator('main &gt; div &gt; div.featured-movies &gt; div &gt; div:nth-child(1) &gt; div.movie-info &gt; h3') to be visible
+</status>
+</kw>
+<msg time="2025-10-29T14:54:32.011065" level="INFO">${title_exists} = False</msg>
+<var>${title_exists}</var>
+<arg>Wait For Elements State</arg>
+<arg>${MOVIE_TITLE}</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-29T14:54:26.775075" elapsed="5.236012"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:32.011968" level="WARN">AVISO: Título do filme não encontrado!</msg>
+<arg>AVISO: Título do filme não encontrado!</arg>
+<arg>WARN</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:32.011561" elapsed="0.001152"/>
+</kw>
+<arg>not ${title_exists}</arg>
+<arg>Log</arg>
+<arg>AVISO: Título do filme não encontrado!</arg>
+<arg>WARN</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-10-29T14:54:32.011220" elapsed="0.001588"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:32.013256" level="INFO">✅ Está na página de detalhes</msg>
+<arg>✅ Está na página de detalhes</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:32.012957" elapsed="0.000535"/>
+</kw>
+<doc>Valida que está na página de detalhes do filme</doc>
+<status status="PASS" start="2025-10-29T14:54:24.768120" elapsed="7.245458"/>
+</kw>
+<kw name="Validar Sessoes Disponiveis" owner="movie_detail_page">
+<kw name="Aguardar Carregamento" owner="base_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-29T14:54:34.015334" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-29T14:54:32.014520" elapsed="2.000949"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-29T14:54:34.022725" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
+<arg>.loading, .spinner, [data-loading]</arg>
+<arg>hidden</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-29T14:54:34.016116" elapsed="0.006759"/>
+</kw>
+<arg>Wait For Elements State</arg>
+<arg>.loading, .spinner, [data-loading]</arg>
+<arg>hidden</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-29T14:54:34.015688" elapsed="0.007276"/>
+</kw>
+<doc>Aguarda indicadores de carregamento sumirem</doc>
+<status status="PASS" start="2025-10-29T14:54:32.014174" elapsed="2.008858"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2025-10-29T14:54:34.027965" level="INFO">${sessions_count} = 0</msg>
+<var>${sessions_count}</var>
+<arg>${SESSION_CARD}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2025-10-29T14:54:34.023176" elapsed="0.004842"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<msg time="2025-10-29T14:54:34.028829" level="FAIL">Nenhuma sessão disponível</msg>
+<arg>${sessions_count} &gt; 0</arg>
+<arg>msg=Nenhuma sessão disponível</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="FAIL" start="2025-10-29T14:54:34.028183" elapsed="0.000738">Nenhuma sessão disponível</status>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${sessions_count} sessões disponíveis</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-10-29T14:54:34.029085" elapsed="0.000190"/>
+</kw>
+<doc>Valida que há sessões disponíveis para o filme</doc>
+<status status="FAIL" start="2025-10-29T14:54:32.013811" elapsed="2.015600">Nenhuma sessão disponível</status>
+</kw>
+<msg time="2025-10-29T14:54:34.037200" level="INFO">Switching browser to CURRENT</msg>
+<msg time="2025-10-29T14:54:34.039735" level="INFO">Returned active browser id. CURRENT</msg>
+<msg time="2025-10-29T14:54:34.040583" level="INFO">Switching browser to browser=c2786334-17f1-4814-810b-91d336762bb1</msg>
+<msg time="2025-10-29T14:54:34.042501" level="INFO">Successfully changed active browser: browser=c2786334-17f1-4814-810b-91d336762bb1</msg>
+<msg time="2025-10-29T14:54:34.042656" level="INFO">Switching context to context=38d011e4-01d5-434e-988e-2701bc9c9f06 in CURRENT</msg>
+<msg time="2025-10-29T14:54:34.049497" level="INFO">Successfully changed active context: context=38d011e4-01d5-434e-988e-2701bc9c9f06</msg>
+<msg time="2025-10-29T14:54:34.049633" level="INFO">Switching to page page=70a90478-5dd0-47f2-8ea9-86b18705840f,context CURRENT, browser CURRENT</msg>
+<msg time="2025-10-29T14:54:34.055185" level="INFO">Successfully changed active page: page=70a90478-5dd0-47f2-8ea9-86b18705840f</msg>
+<msg time="2025-10-29T14:54:34.078385" level="INFO">Successfully closed Page with runBeforeUnload false</msg>
+<doc>Valida que sessões são exibidas nos detalhes do filme</doc>
+<tag>detail</tag>
+<tag>movies</tag>
+<tag>p1</tag>
+<tag>sessions</tag>
+<tag>web</tag>
+<status status="FAIL" start="2025-10-29T14:54:18.277248" elapsed="15.752530">Nenhuma sessão disponível</status>
+</test>
+<test id="s1-s2-s1-t4" name="TC_WEB_007 - Buscar filme por nome deve filtrar resultados" line="50">
+<kw name="Acessar Aplicacao" owner="base_page" type="SETUP">
+<kw name="New Page" owner="Browser">
+<msg time="2025-10-29T14:54:34.486432" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/</msg>
+<arg>${WEB_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-10-29T14:54:34.084245" elapsed="0.402521"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:34.487695" level="INFO">Acessando aplicação: http://localhost:3002/</msg>
+<arg>Acessando aplicação: ${WEB_URL}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:34.487097" elapsed="0.000898"/>
+</kw>
+<doc>Navega para a home da aplicação</doc>
+<status status="PASS" start="2025-10-29T14:54:34.083482" elapsed="0.404682"/>
+</kw>
+<kw name="Validar Que Estou Na Home" owner="home_page">
+<kw name="Aguardar Carregamento" owner="base_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-29T14:54:36.490969" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-29T14:54:34.490214" elapsed="2.000853"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-29T14:54:36.516116" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
+<arg>.loading, .spinner, [data-loading]</arg>
+<arg>hidden</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-29T14:54:36.491553" elapsed="0.024710"/>
+</kw>
+<arg>Wait For Elements State</arg>
+<arg>.loading, .spinner, [data-loading]</arg>
+<arg>hidden</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-29T14:54:36.491221" elapsed="0.025126"/>
+</kw>
+<doc>Aguarda indicadores de carregamento sumirem</doc>
+<status status="PASS" start="2025-10-29T14:54:34.489380" elapsed="2.027107"/>
+</kw>
+<kw name="Get Url" owner="Browser">
+<msg time="2025-10-29T14:54:36.518659" level="INFO">${current_url} = http://localhost:3002/</msg>
+<var>${current_url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2025-10-29T14:54:36.516631" elapsed="0.002073"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${WEB_URL}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-10-29T14:54:36.518847" elapsed="0.000301"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-29T14:54:36.526107" level="INFO">Waited for Element with selector text="Welcome to Cinema App" at state visible</msg>
+<arg>${HOME_TITLE}</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-29T14:54:36.519273" elapsed="0.006991"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:36.526778" level="INFO">✅ Está na Home</msg>
+<arg>✅ Está na Home</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:36.526449" elapsed="0.000649"/>
+</kw>
+<doc>Valida que está na página inicial</doc>
+<status status="PASS" start="2025-10-29T14:54:34.488531" elapsed="2.038677"/>
+</kw>
+<kw name="Obter Quantidade De Filmes Exibidos" owner="home_page">
+<kw name="Aguardar Carregamento" owner="base_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-29T14:54:38.528946" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-29T14:54:36.528106" elapsed="2.001028"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-29T14:54:38.537003" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
+<arg>.loading, .spinner, [data-loading]</arg>
+<arg>hidden</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-29T14:54:38.530077" elapsed="0.007078"/>
+</kw>
+<arg>Wait For Elements State</arg>
+<arg>.loading, .spinner, [data-loading]</arg>
+<arg>hidden</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-29T14:54:38.529428" elapsed="0.007813"/>
+</kw>
+<doc>Aguarda indicadores de carregamento sumirem</doc>
+<status status="PASS" start="2025-10-29T14:54:36.527816" elapsed="2.009492"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2025-10-29T14:54:38.542466" level="INFO">${count} = 3</msg>
+<var>${count}</var>
+<arg>${MOVIE_CARDS}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2025-10-29T14:54:38.537446" elapsed="0.005062"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-29T14:54:38.542596" elapsed="0.000215"/>
+</return>
+<msg time="2025-10-29T14:54:38.542976" level="INFO">${filmes_antes} = 3</msg>
+<var>${filmes_antes}</var>
+<doc>Retorna quantidade de filmes na tela</doc>
+<status status="PASS" start="2025-10-29T14:54:36.527459" elapsed="2.015541"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-29T14:54:40.543846" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-29T14:54:38.543272" elapsed="2.000696"/>
+</kw>
+<kw name="Obter Quantidade De Filmes Exibidos" owner="home_page">
+<kw name="Aguardar Carregamento" owner="base_page">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-29T14:54:42.546869" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-29T14:54:40.545919" elapsed="2.001192"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-10-29T14:54:42.554906" level="INFO">Waited for Element with selector .loading, .spinner, [data-loading] at state hidden</msg>
+<arg>.loading, .spinner, [data-loading]</arg>
+<arg>hidden</arg>
+<arg>timeout=${timeout}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-10-29T14:54:42.548185" elapsed="0.006867"/>
+</kw>
+<arg>Wait For Elements State</arg>
+<arg>.loading, .spinner, [data-loading]</arg>
+<arg>hidden</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-29T14:54:42.547492" elapsed="0.007643"/>
+</kw>
+<doc>Aguarda indicadores de carregamento sumirem</doc>
+<status status="PASS" start="2025-10-29T14:54:40.545180" elapsed="2.010023"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2025-10-29T14:54:42.559571" level="INFO">${count} = 3</msg>
+<var>${count}</var>
+<arg>${MOVIE_CARDS}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2025-10-29T14:54:42.555342" elapsed="0.004272"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2025-10-29T14:54:42.559701" elapsed="0.000221"/>
+</return>
+<msg time="2025-10-29T14:54:42.560145" level="INFO">${filmes_depois} = 3</msg>
+<var>${filmes_depois}</var>
+<doc>Retorna quantidade de filmes na tela</doc>
+<status status="PASS" start="2025-10-29T14:54:40.544490" elapsed="2.015689"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:42.560898" level="INFO">Filmes antes: 3, depois: 3</msg>
+<arg>Filmes antes: ${filmes_antes}, depois: ${filmes_depois}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:42.560561" elapsed="0.000552"/>
+</kw>
+<msg time="2025-10-29T14:54:42.568721" level="INFO">Switching browser to CURRENT</msg>
+<msg time="2025-10-29T14:54:42.570515" level="INFO">Returned active browser id. CURRENT</msg>
+<msg time="2025-10-29T14:54:42.571555" level="INFO">Switching browser to browser=c2786334-17f1-4814-810b-91d336762bb1</msg>
+<msg time="2025-10-29T14:54:42.573633" level="INFO">Successfully changed active browser: browser=c2786334-17f1-4814-810b-91d336762bb1</msg>
+<msg time="2025-10-29T14:54:42.573826" level="INFO">Switching context to context=38d011e4-01d5-434e-988e-2701bc9c9f06 in CURRENT</msg>
+<msg time="2025-10-29T14:54:42.580592" level="INFO">Successfully changed active context: context=38d011e4-01d5-434e-988e-2701bc9c9f06</msg>
+<msg time="2025-10-29T14:54:42.580732" level="INFO">Switching to page page=ef27862e-1bf1-4b4e-bc51-0df5c8e79133,context CURRENT, browser CURRENT</msg>
+<msg time="2025-10-29T14:54:42.586858" level="INFO">Successfully changed active page: page=ef27862e-1bf1-4b4e-bc51-0df5c8e79133</msg>
+<msg time="2025-10-29T14:54:42.597431" level="INFO">Successfully closed Page with runBeforeUnload false</msg>
+<doc>Valida funcionalidade de busca de filmes</doc>
+<tag>movies</tag>
+<tag>p1</tag>
+<tag>search</tag>
+<tag>web</tag>
+<status status="PASS" start="2025-10-29T14:54:34.079749" elapsed="8.481550"/>
+</test>
+<kw name="Fechar Navegador" owner="base_page" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-10-29T14:54:42.821971" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-29T14:54:42.600110" elapsed="0.222082"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:42.822675" level="INFO">Navegador fechado</msg>
+<arg>Navegador fechado</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:42.822370" elapsed="0.000520"/>
+</kw>
+<doc>Fecha o navegador</doc>
+<status status="PASS" start="2025-10-29T14:54:42.599171" elapsed="0.223826"/>
+</kw>
+<doc>Testes de navegação e visualização de filmes na interface web</doc>
+<status status="FAIL" start="2025-10-29T14:53:24.805409" elapsed="78.017631"/>
+</suite>
+<status status="FAIL" start="2025-10-29T14:53:24.803698" elapsed="78.023576"/>
+</suite>
+<suite id="s1-s3" name="Reservations" source="C:\Users\kauar\OneDrive\Área de Trabalho\challenge-final\cinema-app-automation\tests\web\reservations">
+<suite id="s1-s3-s1" name="My Reservations" source="C:\Users\kauar\OneDrive\Área de Trabalho\challenge-final\cinema-app-automation\tests\web\reservations\my_reservations.robot">
+<kw name="Preparar Navegador E Fazer Login" type="SETUP">
+<kw name="Abrir Navegador" owner="base_page">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-10-29T14:54:42.847390" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "executablePath": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe", "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\kauar\\OneDrive\\\u00c1rea de Trabalho\\challenge-final\\results\\browser\\traces\\temp\\d306ceff-5a77-480c-8e5a-78965c6e58e0"}</msg>
+<msg time="2025-10-29T14:54:43.083393" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"executablePath":"C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe","handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\kauar\\OneDrive\\Área de Trabalho\\challenge-final\\results\\browser\\traces\\temp\\d306ceff-5a77-480c-8e5a-78965c6e58e0"}</msg>
+<arg>${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>executablePath=${BRAVE_PATH}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-10-29T14:54:42.846513" elapsed="0.237195"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-10-29T14:54:43.087014" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  }
+}</msg>
+<msg time="2025-10-29T14:54:43.102365" level="INFO">Successfully created context. </msg>
+<msg time="2025-10-29T14:54:43.102505" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-10-29T14:54:43.084034" elapsed="0.018580"/>
+</kw>
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>${TIMEOUT}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2025-10-29T14:54:43.103225" elapsed="0.004260"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:43.108246" level="INFO">Navegador aberto</msg>
+<arg>Navegador aberto</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:43.107799" elapsed="0.008764"/>
+</kw>
+<doc>Abre o navegador configurado (Brave ou Chrome)</doc>
+<status status="PASS" start="2025-10-29T14:54:42.846205" elapsed="0.270625"/>
+</kw>
+<kw name="Acessar Aplicacao" owner="base_page">
+<kw name="New Page" owner="Browser">
+<msg time="2025-10-29T14:54:43.738971" level="INFO">Successfully initialized new page object and opened url: http://localhost:3002/</msg>
+<arg>${WEB_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-10-29T14:54:43.118128" elapsed="0.621411"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:43.740444" level="INFO">Acessando aplicação: http://localhost:3002/</msg>
+<arg>Acessando aplicação: ${WEB_URL}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:43.739815" elapsed="0.000868"/>
+</kw>
+<doc>Navega para a home da aplicação</doc>
+<status status="PASS" start="2025-10-29T14:54:43.117423" elapsed="0.623405"/>
+</kw>
+<kw name="Login Como Usuario Web" owner="base_page">
+<kw name="Fazer Login Via API e Injetar Token" owner="base_page">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:43.742413" level="INFO">Fazendo login via API e injetando token...</msg>
+<arg>Fazendo login via API e injetando token...</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:43.742162" elapsed="0.000491"/>
+</kw>
+<kw name="Fazer Login" owner="auth_service">
+<kw name="Criar Sessao da API" owner="base_api">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-10-29T14:54:43.744574" level="INFO">Creating Session using : alias=cinema_api, url=http://localhost:3000/api/v1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>cinema_api</arg>
+<arg>${BASE_URL}</arg>
+<arg>verify=False</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-10-29T14:54:43.744133" elapsed="0.000689"/>
+</kw>
+<doc>Cria uma sessão HTTP para a API</doc>
+<status status="PASS" start="2025-10-29T14:54:43.743694" elapsed="0.001262"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-10-29T14:54:43.745986" level="INFO">${credentials} = {'email': 'test@example.com', 'password': 'password123'}</msg>
+<var>${credentials}</var>
+<arg>email=${email}</arg>
+<arg>password=${password}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-10-29T14:54:43.745182" elapsed="0.000865"/>
+</kw>
+<kw name="Criar Headers Padrao" owner="base_api">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-10-29T14:54:43.747656" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>Content-Type=${CONTENT_TYPE}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-10-29T14:54:43.747053" elapsed="0.000655"/>
+</kw>
+<return>
+<value>${headers}</value>
+<status status="PASS" start="2025-10-29T14:54:43.747826" elapsed="0.000265"/>
+</return>
+<msg time="2025-10-29T14:54:43.748395" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<var>${headers}</var>
+<doc>Cria headers padrão para requisições</doc>
+<status status="PASS" start="2025-10-29T14:54:43.746402" elapsed="0.002063"/>
+</kw>
+<kw name="Log Request Details" owner="base_api">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:43.750138" level="INFO">🔵 REQUEST: POST /auth/login</msg>
+<arg>🔵 REQUEST: ${method} ${endpoint}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:43.749637" elapsed="0.000771"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:43.752022" level="INFO">Body: {'email': 'test@example.com', 'password': 'password123'}</msg>
+<arg>Body: ${body}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:43.751529" elapsed="0.000726"/>
+</kw>
+<arg>${body} is not ${NONE}</arg>
+<arg>Log</arg>
+<arg>Body: ${body}</arg>
+<arg>console=True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-10-29T14:54:43.750691" elapsed="0.001684"/>
+</kw>
+<arg>POST</arg>
+<arg>${AUTH_LOGIN}</arg>
+<arg>${credentials}</arg>
+<doc>Loga detalhes da requisição para debug</doc>
+<status status="PASS" start="2025-10-29T14:54:43.748896" elapsed="0.003586"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-10-29T14:54:43.823080" level="INFO">POST Request : url=http://localhost:3000/api/v1/auth/login 
+ path_url=/api/v1/auth/login 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '56'} 
+ body=b'{"email": "test@example.com", "password": "password123"}' 
+ </msg>
+<msg time="2025-10-29T14:54:43.823176" level="INFO">POST Response : url=http://localhost:3000/api/v1/auth/login 
+ status=401, reason=Unauthorized 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '55', 'ETag': 'W/"37-5uDpJTljPBecOPs/j7OXFdPRcmQ"', 'Date': 'Wed, 29 Oct 2025 17:54:43 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body={"success":false,"message":"Invalid email or password"} 
+ </msg>
+<msg time="2025-10-29T14:54:43.823313" level="INFO">${response} = &lt;Response [401]&gt;</msg>
+<var>${response}</var>
+<arg>cinema_api</arg>
+<arg>${AUTH_LOGIN}</arg>
+<arg>json=${credentials}</arg>
+<arg>headers=${headers}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-10-29T14:54:43.752845" elapsed="0.070495"/>
+</kw>
+<kw name="Log Response Details" owner="base_api">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:43.825962" level="INFO">RESPONSE: Status 401</msg>
+<arg>RESPONSE: Status ${response.status_code}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:43.824267" elapsed="0.001947"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:43.827236" level="INFO">Body: {"success":false,"message":"Invalid email or password"}</msg>
+<arg>Body: ${response.text}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:43.826409" elapsed="0.001034"/>
+</kw>
+<arg>${response}</arg>
+<doc>Loga detalhes da resposta para debug</doc>
+<status status="PASS" start="2025-10-29T14:54:43.823612" elapsed="0.003954"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-10-29T14:54:43.827629" elapsed="0.000166"/>
+</return>
+<msg time="2025-10-29T14:54:43.827963" level="INFO">${response} = &lt;Response [401]&gt;</msg>
+<var>${response}</var>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<doc>Realiza login e retorna a resposta completa</doc>
+<status status="PASS" start="2025-10-29T14:54:43.743001" elapsed="0.084992"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-10-29T14:54:43.829243" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2025-10-29T14:54:43.829414" level="FAIL">401 != 200</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2025-10-29T14:54:43.828186" elapsed="0.001332">401 != 200</status>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${response_json}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-10-29T14:54:43.829816" elapsed="0.000312"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<var>${data}</var>
+<arg>${response_json}</arg>
+<arg>data</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" start="2025-10-29T14:54:43.830382" elapsed="0.000231"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<var>${token}</var>
+<arg>${data}</arg>
+<arg>token</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" start="2025-10-29T14:54:43.830787" elapsed="0.000141"/>
+</kw>
+<kw name="Evaluate JavaScript" owner="Browser">
+<arg>None</arg>
+<arg>window.localStorage.setItem('token', '${token}')</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes given javascript on the selected element(s) or on page.</doc>
+<status status="NOT RUN" start="2025-10-29T14:54:43.831114" elapsed="0.000129"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${user_json}</var>
+<arg>json.dumps($data)</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-10-29T14:54:43.831417" elapsed="0.000141"/>
+</kw>
+<kw name="Evaluate JavaScript" owner="Browser">
+<arg>None</arg>
+<arg>window.localStorage.setItem('user', '${user_json}')</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes given javascript on the selected element(s) or on page.</doc>
+<status status="NOT RUN" start="2025-10-29T14:54:43.831717" elapsed="0.000147"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Token JWT injetado no localStorage</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-10-29T14:54:43.832023" elapsed="0.000117"/>
+</kw>
+<kw name="Reload" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Reloads current active page.</doc>
+<status status="NOT RUN" start="2025-10-29T14:54:43.832302" elapsed="0.000116"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-29T14:54:43.832565" elapsed="0.000128"/>
+</kw>
+<arg>${USER_EMAIL}</arg>
+<arg>${USER_PASSWORD}</arg>
+<doc>WORKAROUND: Faz login via API e injeta token no localStorage
+Necessário porque login/register não funcionam no front</doc>
+<status status="FAIL" start="2025-10-29T14:54:43.741648" elapsed="0.091224">401 != 200</status>
+</kw>
+<doc>Helper para login como usuário comum via API + injeção de token</doc>
+<status status="FAIL" start="2025-10-29T14:54:43.741074" elapsed="0.091962">401 != 200</status>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>🔐 Login realizado com sucesso</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-10-29T14:54:43.833219" elapsed="0.000197"/>
+</kw>
+<doc>Prepara navegador e faz login antes dos testes</doc>
+<status status="FAIL" start="2025-10-29T14:54:42.845696" elapsed="0.987874">401 != 200</status>
+</kw>
+<test id="s1-s3-s1-t1" name="TC_WEB_050 - Verificar carregamento da pagina de reservas" line="13">
+<doc>Verifica se a página de reservas carrega corretamente</doc>
+<tag>p0</tag>
+<tag>reservations</tag>
+<tag>smoke</tag>
+<tag>web</tag>
+<status status="FAIL" start="2025-10-29T14:54:43.833705" elapsed="0.039878">Parent suite setup failed:
+401 != 200</status>
+</test>
+<test id="s1-s3-s1-t2" name="TC_WEB_051 - Verificar estrutura do card de reserva" line="20">
+<doc>Valida a estrutura completa de um card de reserva</doc>
+<tag>p0</tag>
+<tag>reservations</tag>
+<tag>structure</tag>
+<tag>web</tag>
+<status status="FAIL" start="2025-10-29T14:54:43.892229" elapsed="0.010098">Parent suite setup failed:
+401 != 200</status>
+</test>
+<test id="s1-s3-s1-t3" name="TC_WEB_052 - Validar conteudo completo da reserva" line="27">
+<doc>Valida todas as informações de uma reserva</doc>
+<tag>content</tag>
+<tag>p0</tag>
+<tag>reservations</tag>
+<tag>web</tag>
+<status status="FAIL" start="2025-10-29T14:54:43.908995" elapsed="0.005543">Parent suite setup failed:
+401 != 200</status>
+</test>
+<test id="s1-s3-s1-t4" name="TC_WEB_054 - Validar status da reserva" line="41">
+<doc>Verifica se o status da reserva está correto</doc>
+<tag>p1</tag>
+<tag>reservations</tag>
+<tag>status</tag>
+<tag>web</tag>
+<status status="FAIL" start="2025-10-29T14:54:43.920869" elapsed="0.004737">Parent suite setup failed:
+401 != 200</status>
+</test>
+<test id="s1-s3-s1-t5" name="TC_WEB_055 - Verificar informacoes de pagamento" line="48">
+<doc>Valida as informações de pagamento da reserva</doc>
+<tag>p1</tag>
+<tag>payment</tag>
+<tag>reservations</tag>
+<tag>web</tag>
+<status status="FAIL" start="2025-10-29T14:54:43.952019" elapsed="0.005114">Parent suite setup failed:
+401 != 200</status>
+</test>
+<test id="s1-s3-s1-t6" name="TC_WEB_057 - Navegar para pagina inicial" line="56">
+<doc>Testa a navegação para a página inicial</doc>
+<tag>navigation</tag>
+<tag>p2</tag>
+<tag>reservations</tag>
+<tag>web</tag>
+<status status="FAIL" start="2025-10-29T14:54:43.970463" elapsed="0.003832">Parent suite setup failed:
+401 != 200</status>
+</test>
+<test id="s1-s3-s1-t7" name="TC_WEB_058 - Navegar para filmes em cartaz" line="64">
+<doc>Testa a navegação para a página de filmes</doc>
+<tag>navigation</tag>
+<tag>p2</tag>
+<tag>reservations</tag>
+<tag>web</tag>
+<status status="FAIL" start="2025-10-29T14:54:43.979825" elapsed="0.004103">Parent suite setup failed:
+401 != 200</status>
+</test>
+<test id="s1-s3-s1-t8" name="TC_WEB_060 - Validar poster do filme" line="72">
+<doc>Verifica se o poster do filme é exibido corretamente</doc>
+<tag>image</tag>
+<tag>p2</tag>
+<tag>reservations</tag>
+<tag>web</tag>
+<status status="FAIL" start="2025-10-29T14:54:43.990272" elapsed="0.004220">Parent suite setup failed:
+401 != 200</status>
+</test>
+<test id="s1-s3-s1-t9" name="TC_WEB_061 - Verificar quantidade de reservas" line="79">
+<doc>Valida a quantidade de reservas do usuário</doc>
+<tag>p1</tag>
+<tag>reservations</tag>
+<tag>web</tag>
+<status status="FAIL" start="2025-10-29T14:54:44.001858" elapsed="0.016770">Parent suite setup failed:
+401 != 200</status>
+</test>
+<kw name="Fechar Navegador" owner="base_page" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-10-29T14:54:44.246260" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-29T14:54:44.027901" elapsed="0.218551"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-29T14:54:44.247035" level="INFO">Navegador fechado</msg>
+<arg>Navegador fechado</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-29T14:54:44.246652" elapsed="0.000641"/>
+</kw>
+<doc>Fecha o navegador</doc>
+<status status="PASS" start="2025-10-29T14:54:44.027246" elapsed="0.220186"/>
+</kw>
+<doc>Testes da página de reservas do usuário</doc>
+<status status="FAIL" start="2025-10-29T14:54:42.829713" elapsed="1.417775">Suite setup failed:
+401 != 200</status>
+</suite>
+<status status="FAIL" start="2025-10-29T14:54:42.827874" elapsed="1.425656"/>
+</suite>
+<status status="FAIL" start="2025-10-29T14:53:19.341671" elapsed="84.912551"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="18" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">content</stat>
+<stat pass="0" fail="2" skip="0">detail</stat>
+<stat pass="0" fail="1" skip="0">edit</stat>
+<stat pass="1" fail="0" skip="0">home</stat>
+<stat pass="0" fail="1" skip="0">image</stat>
+<stat pass="2" fail="2" skip="0">movies</stat>
+<stat pass="0" fail="3" skip="0">navigation</stat>
+<stat pass="1" fail="6" skip="0">p0</stat>
+<stat pass="1" fail="7" skip="0">p1</stat>
+<stat pass="0" fail="5" skip="0">p2</stat>
+<stat pass="0" fail="1" skip="0">password</stat>
+<stat pass="0" fail="1" skip="0">payment</stat>
+<stat pass="0" fail="7" skip="0">profile</stat>
+<stat pass="0" fail="9" skip="0">reservations</stat>
+<stat pass="1" fail="0" skip="0">search</stat>
+<stat pass="0" fail="1" skip="0">sessions</stat>
+<stat pass="1" fail="3" skip="0">smoke</stat>
+<stat pass="0" fail="1" skip="0">status</stat>
+<stat pass="0" fail="1" skip="0">structure</stat>
+<stat pass="0" fail="2" skip="0">validation</stat>
+<stat pass="2" fail="18" skip="0">web</stat>
+</tag>
+<suite>
+<stat name="Web" id="s1" pass="2" fail="18" skip="0">Web</stat>
+<stat name="Auth" id="s1-s1" pass="0" fail="7" skip="0">Web.Auth</stat>
+<stat name="Profile" id="s1-s1-s1" pass="0" fail="7" skip="0">Web.Auth.Profile</stat>
+<stat name="Movies" id="s1-s2" pass="2" fail="2" skip="0">Web.Movies</stat>
+<stat name="Browse Movies" id="s1-s2-s1" pass="2" fail="2" skip="0">Web.Movies.Browse Movies</stat>
+<stat name="Reservations" id="s1-s3" pass="0" fail="9" skip="0">Web.Reservations</stat>
+<stat name="My Reservations" id="s1-s3-s1" pass="0" fail="9" skip="0">Web.Reservations.My Reservations</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-10-29T14:53:47.991775" level="WARN">AVISO: Título do filme não encontrado!</msg>
+<msg time="2025-10-29T14:54:32.011968" level="WARN">AVISO: Título do filme não encontrado!</msg>
+</errors>
+</robot>
